@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1769718673.17777 "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" "ds-main.pdf" "ds-main" 1769718675.17117 0
-  "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" 1769718670.98578 9625 e6d2b8195f0a281d7e1e342ff32189b5 ""
+["pdflatex"] 1769722031.49841 "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" "ds-main.pdf" "ds-main" 1769722033.44815 0
+  "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" 1769719007.58862 9667 2b6a9424205bd2b5565c6cd67e1b8c66 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1741388039 2375 baa924870cfb487815765f9094cf3728 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1741388039 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1741388039 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -204,13 +204,15 @@
   "asset/id3-algo.png" 1769707780.36397 155547 3491437740c7fc3af11ab6a8fb45adc0 ""
   "asset/id3-example1.png" 1769707644.49693 179541 12022b414bac519661a7661d4cc1a5f9 ""
   "asset/id3-example2.png" 1769707668.95714 118064 24be16b0072b8a6fa79203ceae557f6b ""
+  "asset/ig2-1.png" 1769718816.357 53838 2e9c612110052de62fd3df8abb70c0b3 ""
+  "asset/igr-2.png" 1769718826.42706 78941 ed9455ff7a63c3ae83bcba9d55c5952d ""
   "asset/information-gain.png" 1769707147.89191 216851 e98f279e27f1e18e55f5750254ee0470 ""
   "asset/overall-entropy.png" 1769706864.9441 211930 fb9ed18b9985de6a920e674414bcb3bf ""
-  "ds-main.aux" 1769718675.04282 5739 74ad6664838e0dca40e45b621e3772b2 "pdflatex"
-  "ds-main.out" 1769718675.04525 7011 fa5015d59f6de5cb9a0e4cfddfffec14 "pdflatex"
-  "ds-main.tex" 1769718670.98578 9625 e6d2b8195f0a281d7e1e342ff32189b5 ""
-  "ds-main.toc" 1769718675.0458 3772 1c66a347ef6beb8b1df0fec0c89e9ba7 "pdflatex"
-  "teach.tex" 1769718671.68691 9713 ae7ba19953101eb62150ea1089f80a92 ""
+  "ds-main.aux" 1769722033.32914 5875 80de7bbb9db69460a3945f875d4b0088 "pdflatex"
+  "ds-main.out" 1769722033.33043 7215 a060b45837a1250e920e3dbb0c82984c "pdflatex"
+  "ds-main.tex" 1769719007.58862 9667 2b6a9424205bd2b5565c6cd67e1b8c66 ""
+  "ds-main.toc" 1769722033.33075 3867 9a548905d53937d23a3b39b7b22cf367 "pdflatex"
+  "teach.tex" 1769722031.39275 11451 ecec3d6c238084e99a2c61cb816f91d2 ""
   (generated)
   "ds-main.aux"
   "ds-main.log"

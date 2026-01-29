@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 JAN 2026 21:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 JAN 2026 22:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -721,7 +721,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [2]
 
 [3{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<asset/data-types.png, id=248, 509.905pt x 170.6375pt>
+<asset/data-types.png, id=253, 509.905pt x 170.6375pt>
 File: asset/data-types.png Graphic file (type png)
 <use asset/data-types.png>
 Package pdftex.def Info: asset/data-types.png  used on input line 220.
@@ -734,7 +734,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [4{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} <./asset/data-types.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 223.
-<asset/box-plot.png, id=257, 483.8075pt x 227.85126pt>
+<asset/box-plot.png, id=262, 483.8075pt x 227.85126pt>
 File: asset/box-plot.png Graphic file (type png)
 <use asset/box-plot.png>
 Package pdftex.def Info: asset/box-plot.png  used on input line 226.
@@ -746,17 +746,17 @@ Package pdftex.def Info: asset/box-plot.png  used on input line 226.
 [6]
 
 [7]
-<asset/entropy-formula.png, id=280, 458.71375pt x 156.585pt>
+<asset/entropy-formula.png, id=285, 458.71375pt x 156.585pt>
 File: asset/entropy-formula.png Graphic file (type png)
 <use asset/entropy-formula.png>
 Package pdftex.def Info: asset/entropy-formula.png  used on input line 243.
 (pdftex.def)             Requested size: 343.94757pt x 117.41455pt.
-<asset/overall-entropy.png, id=281, 537.00626pt x 292.09125pt>
+<asset/overall-entropy.png, id=286, 537.00626pt x 292.09125pt>
 File: asset/overall-entropy.png Graphic file (type png)
 <use asset/overall-entropy.png>
 Package pdftex.def Info: asset/overall-entropy.png  used on input line 243.
 (pdftex.def)             Requested size: 343.94757pt x 187.08037pt.
-<asset/information-gain.png, id=282, 526.96875pt x 286.06876pt>
+<asset/information-gain.png, id=287, 526.96875pt x 286.06876pt>
 File: asset/information-gain.png Graphic file (type png)
 <use asset/information-gain.png>
 Package pdftex.def Info: asset/information-gain.png  used on input line 243.
@@ -764,17 +764,17 @@ Package pdftex.def Info: asset/information-gain.png  used on input line 243.
 
 
 [8 <./asset/entropy-formula.png> <./asset/overall-entropy.png> <./asset/information-gain.png>]
-<asset/id3-algo.png, id=290, 519.9425pt x 281.05pt>
+<asset/id3-algo.png, id=295, 519.9425pt x 281.05pt>
 File: asset/id3-algo.png Graphic file (type png)
 <use asset/id3-algo.png>
 Package pdftex.def Info: asset/id3-algo.png  used on input line 249.
 (pdftex.def)             Requested size: 343.94757pt x 185.91812pt.
-<asset/id3-example1.png, id=291, 557.08125pt x 307.1475pt>
+<asset/id3-example1.png, id=296, 557.08125pt x 307.1475pt>
 File: asset/id3-example1.png Graphic file (type png)
 <use asset/id3-example1.png>
 Package pdftex.def Info: asset/id3-example1.png  used on input line 249.
 (pdftex.def)             Requested size: 343.94757pt x 189.63742pt.
-<asset/id3-example2.png, id=292, 539.01375pt x 309.155pt>
+<asset/id3-example2.png, id=297, 539.01375pt x 309.155pt>
 File: asset/id3-example2.png Graphic file (type png)
 <use asset/id3-example2.png>
 Package pdftex.def Info: asset/id3-example2.png  used on input line 249.
@@ -784,34 +784,49 @@ Package pdftex.def Info: asset/id3-example2.png  used on input line 249.
 [9]
 
 [10 <./asset/id3-algo.png> <./asset/id3-example1.png> <./asset/id3-example2.png>]
+<asset/ig2-1.png, id=309, 883.3pt x 357.335pt>
+File: asset/ig2-1.png Graphic file (type png)
+<use asset/ig2-1.png>
+Package pdftex.def Info: asset/ig2-1.png  used on input line 250.
+(pdftex.def)             Requested size: 343.94757pt x 139.14198pt.
+<asset/igr-2.png, id=310, 883.3pt x 493.845pt>
+File: asset/igr-2.png Graphic file (type png)
+<use asset/igr-2.png>
+Package pdftex.def Info: asset/igr-2.png  used on input line 250.
+(pdftex.def)             Requested size: 343.94757pt x 192.29735pt.
+
 
 [11]
 
-[12]
+[12 <./asset/ig2-1.png> <./asset/igr-2.png>]
 
 [13]
 
-[14] (./ds-main.aux)
+[14]
+
+[15]
+
+[16] (./ds-main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `ds-main.out' has not changed.
-(rerunfilecheck)             Checksum: FA5015D59F6DE5CB9A0E4CFDDFFFEC14;7011.
+(rerunfilecheck)             Checksum: A060B45837A1250E920E3DBB0C82984C;7215.
  ) 
 Here is how much of TeX's memory you used:
- 26778 strings out of 473190
- 521176 string characters out of 5704335
- 939081 words of memory out of 5000000
- 49455 multiletter control sequences out of 15000+600000
- 618609 words of font info for 119 fonts, out of 8000000 for 9000
+ 26804 strings out of 473190
+ 521637 string characters out of 5704335
+ 941511 words of memory out of 5000000
+ 49476 multiletter control sequences out of 15000+600000
+ 618692 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,8n,101p,1048b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ds-main.pdf (14 pages, 1056891 bytes).
+Output written on ds-main.pdf (16 pages, 1145009 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 340 compressed objects within 4 object streams
- 60 named destinations out of 1000 (max. 500000)
- 35221 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 35239 words of extra memory for PDF output out of 35830 (max. 10000000)
 

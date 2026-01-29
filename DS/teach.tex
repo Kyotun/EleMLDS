@@ -275,3 +275,45 @@ ID3 favors attributes with many values; without corrections (e.g., gain ratio) i
 
 \textbf{Key takeaways:} ID3 is greedy; compute IG, split, recurse, stop with pure/majority leaves.
 }
+
+% 2.4 Quantifying Information Gain
+\DefineTeach{2.4}{%
+\begin{examlikelihood}{Very High}
+Often compute IG for a specific split and compare candidate attributes.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Show all intermediate steps: parent entropy, each child entropy, weighted sum, IG.
+\end{examfavorite}
+
+Why (motivation): Convert “best split” into a concrete, comparable number.\\
+What (definition): IG = parent entropy minus weighted child entropies; Split Info measures how evenly the split divides data; Gain Ratio normalizes IG.\\
+How (procedure/usage): Compute IG, then divide by split info to get gain ratio.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Step 1:} compute parent entropy $H(S)$.
+  \item \textbf{Step 2:} split by attribute values.
+  \item \textbf{Step 3:} compute each child entropy $H(S_k)$.
+  \item \textbf{Step 4:} compute weighted sum $\sum_k \frac{|S_k|}{|S|}H(S_k)$.
+  \item \textbf{Step 5:} IG $= H(S) - \sum_k \frac{|S_k|}{|S|}H(S_k)$.
+  \item \textbf{Split info (lecture: $H(d)$):} entropy of split proportions (how evenly data is partitioned).\\
+  \hspace*{2mm}$H(d)=SI = -\sum_k \frac{|S_k|}{|S|}\log_2 \frac{|S_k|}{|S|}$.
+  \item \textbf{Gain ratio:} $GR = \frac{IG}{H(d)}$ (same as $IG/SI$; penalizes many-valued attributes).
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Information gain is biased toward attributes with many values; use gain ratio to correct.
+Also: weight by subset size and keep log base consistent.
+\end{pitfall}
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.75\linewidth]{asset/ig2-1.png}
+\vspace{2mm}
+\includegraphics[width=0.75\linewidth]{asset/igr-2.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} IG is a weighted impurity reduction; higher is better.
+}
