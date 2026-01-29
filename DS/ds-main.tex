@@ -195,15 +195,12 @@ Modeling $\rightarrow$ Evaluation $\rightarrow$ Deployment (iterative loops).
 \node[crispstep, left=of m] (e) {Evaluation};
 \node[crispstep, right=of m] (d) {Deployment};
 
-\draw[arrow] (b) -- (du);
+\draw[<->, thick] (b) -- (du);
 \draw[arrow] (du) -- (dp);
-\draw[arrow] (dp) -- (m);
+\draw[<->, thick] (dp) -- (m);
 \draw[arrow] (m) -- (e);
+\draw[arrow] (e.south) .. controls +(0,-10mm) and +(0,-10mm) .. (d.south);
 \draw[arrow] (e) -- (b);
-
-% Iteration arrows
-% \draw[arrow] (e.north) .. controls +(0,10mm) and +(0,10mm) .. (du.north);
-\draw[arrow] (m.south) .. controls +(0,-10mm) and +(0,-10mm) .. (dp.south);
 \end{tikzpicture}
 \end{visualbox}
 

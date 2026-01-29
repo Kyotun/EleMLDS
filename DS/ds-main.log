@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 JAN 2026 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 JAN 2026 17:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -721,14 +721,27 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [2]
 
 [3{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<asset/data-types.png, id=248, 509.905pt x 170.6375pt>
+File: asset/data-types.png Graphic file (type png)
+<use asset/data-types.png>
+Package pdftex.def Info: asset/data-types.png  used on input line 220.
+(pdftex.def)             Requested size: 412.73428pt x 138.12708pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 223.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-[4{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+[4{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} <./asset/data-types.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 223.
+<asset/box-plot.png, id=257, 483.8075pt x 227.85126pt>
+File: asset/box-plot.png Graphic file (type png)
+<use asset/box-plot.png>
+Package pdftex.def Info: asset/box-plot.png  used on input line 226.
+(pdftex.def)             Requested size: 412.73428pt x 194.3872pt.
 
-[5]
+
+[5{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./asset/box-plot.png>]
 
 [6]
 
@@ -738,7 +751,9 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 [9]
 
-[10] (./ds-main.aux)
+[10]
+
+[11] (./ds-main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -747,18 +762,18 @@ Package rerunfilecheck Info: File `ds-main.out' has not changed.
 (rerunfilecheck)             Checksum: FA5015D59F6DE5CB9A0E4CFDDFFFEC14;7011.
  ) 
 Here is how much of TeX's memory you used:
- 26695 strings out of 473190
- 519263 string characters out of 5704335
- 933893 words of memory out of 5000000
- 49396 multiletter control sequences out of 15000+600000
- 608257 words of font info for 107 fonts, out of 8000000 for 9000
+ 26668 strings out of 473190
+ 519027 string characters out of 5704335
+ 935038 words of memory out of 5000000
+ 49355 multiletter control sequences out of 15000+600000
+ 615380 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,8n,101p,1048b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ds-main.pdf (10 pages, 167296 bytes).
+</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on ds-main.pdf (11 pages, 377987 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 298 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 29037 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 33143 words of extra memory for PDF output out of 35830 (max. 10000000)
 
