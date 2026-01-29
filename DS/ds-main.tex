@@ -66,6 +66,38 @@
   colframe=purple!55!black
 }
 
+% --------- Teaching content hooks ----------
+\makeatletter
+\newcommand{\DefineTeach}[2]{\expandafter\def\csname Teach@#1\endcsname{#2}}
+\newcommand{\UseTeach}[1]{\@ifundefined{Teach@#1}{}{\csname Teach@#1\endcsname}}
+\makeatother
+
+\input{teach.tex}
+
+% Insert teaching blocks automatically after (sub)section headings.
+\makeatletter
+\let\oldsection\section
+\renewcommand{\section}{\@ifstar{\TeachSectionStar}{\TeachSectionNoStar}}
+\newcommand{\TeachSectionNoStar}{\@ifnextchar[{\TeachSectionOpt}{\TeachSectionPlain}}
+\newcommand{\TeachSectionPlain}[1]{\oldsection{#1}\UseTeach{\thesection}}
+\newcommand{\TeachSectionOpt}[2][]{\oldsection[#1]{#2}\UseTeach{\thesection}}
+\newcommand{\TeachSectionStar}[1]{\oldsection*{#1}}
+
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{\@ifstar{\TeachSubsectionStar}{\TeachSubsectionNoStar}}
+\newcommand{\TeachSubsectionNoStar}{\@ifnextchar[{\TeachSubsectionOpt}{\TeachSubsectionPlain}}
+\newcommand{\TeachSubsectionPlain}[1]{\oldsubsection{#1}\UseTeach{\thesubsection}}
+\newcommand{\TeachSubsectionOpt}[2][]{\oldsubsection[#1]{#2}\UseTeach{\thesubsection}}
+\newcommand{\TeachSubsectionStar}[1]{\oldsubsection*{#1}}
+
+\let\oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{\@ifstar{\TeachSubsubsectionStar}{\TeachSubsubsectionNoStar}}
+\newcommand{\TeachSubsubsectionNoStar}{\@ifnextchar[{\TeachSubsubsectionOpt}{\TeachSubsubsectionPlain}}
+\newcommand{\TeachSubsubsectionPlain}[1]{\oldsubsubsection{#1}\UseTeach{\thesubsubsection}}
+\newcommand{\TeachSubsubsectionOpt}[2][]{\oldsubsubsection[#1]{#2}\UseTeach{\thesubsubsection}}
+\newcommand{\TeachSubsubsectionStar}[1]{\oldsubsubsection*{#1}}
+\makeatother
+
 % --------- Title ----------
 \title{\textbf{Elements of Machine Learning and Data Science}\\
 \large Part I: Data Science — Exam Notes (Living Document)}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1769687197.5664 "/Users/kyotun/Desktop/5.semester/MLDS/DS/ds-main.tex" "ds-main.pdf" "ds-main" 1769687199.02846 0
-  "/Users/kyotun/Desktop/5.semester/MLDS/DS/ds-main.tex" 1769687194.48766 8073 a4a9f07a5ee3361119cb61fa9607d4a0 ""
+["pdflatex"] 1769698308.49851 "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" "ds-main.pdf" "ds-main" 1769698309.59026 0
+  "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" 1769698308.30488 9730 355e5f8c7bfbd03bfb699ecd568dac8c ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1741388039 2375 baa924870cfb487815765f9094cf3728 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1741388039 2840 216e6e45ad352e2456e1149f28885bee ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/fontname/texfonts.map" 1741388039 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -178,10 +178,11 @@
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1741388039 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/web2c/texmf.cnf" 1741388039 42151 79f67285bdd95beca4d137b380b4b9e5 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1741388039 3346140 981dae4097bc43850a521b8b1e36e95f ""
-  "ds-main.aux" 1769687198.91769 5711 3c6575a30861cce90c6b63e4195a0048 "pdflatex"
-  "ds-main.out" 1769687198.91917 7011 fa5015d59f6de5cb9a0e4cfddfffec14 "pdflatex"
-  "ds-main.tex" 1769687194.48766 8073 a4a9f07a5ee3361119cb61fa9607d4a0 ""
-  "ds-main.toc" 1769687198.91957 3745 b6a0e8723e3589f7f9bd1133c74f19d8 "pdflatex"
+  "ds-main.aux" 1769698309.49219 5711 3c6575a30861cce90c6b63e4195a0048 "pdflatex"
+  "ds-main.out" 1769698309.4934 7011 fa5015d59f6de5cb9a0e4cfddfffec14 "pdflatex"
+  "ds-main.tex" 1769698308.30488 9730 355e5f8c7bfbd03bfb699ecd568dac8c ""
+  "ds-main.toc" 1769698309.49372 3745 b6a0e8723e3589f7f9bd1133c74f19d8 "pdflatex"
+  "teach.tex" 1769697574.72529 953 bd68837df08109612d89ed7103750f1f ""
   (generated)
   "ds-main.aux"
   "ds-main.log"
