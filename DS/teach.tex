@@ -146,3 +146,132 @@ Fitting transforms on the full dataset (leakage). Always fit on training data, t
 
 \textbf{Key takeaways:} Use one-hot for nominal, ordinal for ordered labels, and binning for simplification.
 }
+
+% 2.1 Introduction to Decision Trees
+\DefineTeach{2.1}{%
+\begin{examlikelihood}{High}
+Intro questions often ask you to explain how trees split data and what leaves represent.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Draw a small tree from a toy dataset or explain interpretability vs overfitting.
+\end{examfavorite}
+
+Why (motivation): Learn a function from labeled training instances to make predictions.\\
+What (definition): A tree partitions the feature space by sequential if-then splits; leaves output a class or value.\\
+How (procedure/usage): Choose splits to improve class purity or reduce prediction error.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Goal:} learn a function $f(X)$ from labeled data to predict labels/values.
+  \item \textbf{Tree structure:} root node, internal (non-leaf) nodes, leaf nodes.
+  \item \textbf{Split rule:} one feature + threshold; paths are if-then rules.
+  \item \textbf{Leaf meaning:} prediction (class/value) for that region of the space.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Overly deep trees memorize training data; control with max depth, min samples, or pruning.
+\end{pitfall}
+
+\begin{visualbox}
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 12mm,
+  box/.style={draw, rounded corners, align=center, minimum width=26mm, minimum height=8mm},
+  arrow/.style={-Latex, thick}
+]
+\node[box] (root) {$x_1 < 5?$};
+\node[box, below left=of root] (l) {Leaf: Class A};
+\node[box, below right=of root] (r) {$x_2 < 3?$};
+\node[box, below left=of r] (rl) {Leaf: Class B};
+\node[box, below right=of r] (rr) {Leaf: Class A};
+\draw[arrow] (root) -- (l);
+\draw[arrow] (root) -- (r);
+\draw[arrow] (r) -- (rl);
+\draw[arrow] (r) -- (rr);
+\end{tikzpicture}
+\end{visualbox}
+
+\textbf{Key takeaways:} Trees learn $f$ from labeled data using splits; nodes/leaf roles are core.
+}
+
+% 2.2 Entropy and Information Gain
+\DefineTeach{2.2}{%
+\begin{examlikelihood}{Very High}
+Almost guaranteed: compute entropy and information gain for candidate splits.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a small labeled dataset, compare splits and pick the one with highest information gain.
+\end{examfavorite}
+
+Why (motivation): Choose splits that make child nodes as pure as possible.\\
+What (definition): Entropy measures impurity; information gain is impurity reduction.\\
+How (procedure/usage): Compute parent entropy, child entropies, then IG = parent - weighted children.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Entropy:} $H(S)=-\sum_{c} p_c \log_2 p_c$ (define $0\log 0 = 0$).
+  \item \textbf{Weighted child entropy:} $\sum_{k}\frac{|S_k|}{|S|} H(S_k)$.
+  \item \textbf{Information gain:} $\mathrm{IG}(S, \text{split})=H(S)-\sum_{k}\frac{|S_k|}{|S|} H(S_k)$.
+  \item \textbf{Goal:} choose split with highest IG (most impurity reduction).
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Forgetting to weight child entropies by subset size; using raw entropy sums gives wrong IG.
+\end{pitfall}
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.75\linewidth]{asset/entropy-formula.png}
+\vspace{2mm}
+\includegraphics[width=0.75\linewidth]{asset/overall-entropy.png}
+\vspace{2mm}
+\includegraphics[width=0.75\linewidth]{asset/information-gain.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} Compute entropy, weight children, pick split with highest IG.
+}
+
+% 2.3 ID3 Algorithm
+\DefineTeach{2.3}{%
+\begin{examlikelihood}{Very High}
+Common: list the ID3 steps or run one iteration to choose the best split.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Explain stopping conditions and why ID3 prefers high information gain.
+\end{examfavorite}
+
+Why (motivation): Build a decision tree that best separates labeled data.\\
+What (definition): ID3 is a greedy, top-down tree induction algorithm using information gain.\\
+How (procedure/usage): Compute IG for each attribute, split on the best, and recurse.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Input:} labeled dataset $S$ with categorical attributes (ID3 original).
+  \item \textbf{Step 1:} if all labels same $\rightarrow$ make a leaf.
+  \item \textbf{Step 2:} if no attributes left $\rightarrow$ leaf with majority class.
+  \item \textbf{Step 3:} choose attribute with highest IG.
+  \item \textbf{Step 4:} split $S$ by attribute values and recurse.
+  \item \textbf{Output:} a decision tree; leaves store class label.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+ID3 favors attributes with many values; without corrections (e.g., gain ratio) it can overfit.
+\end{pitfall}
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.75\linewidth]{asset/id3-algo.png}
+\vspace{2mm}
+\includegraphics[width=0.75\linewidth]{asset/id3-example1.png}
+\vspace{2mm}
+\includegraphics[width=0.75\linewidth]{asset/id3-example2.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} ID3 is greedy; compute IG, split, recurse, stop with pure/majority leaves.
+}
