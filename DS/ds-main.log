@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 JAN 2026 22:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 JAN 2026 22:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,16 +797,24 @@ Package pdftex.def Info: asset/igr-2.png  used on input line 250.
 
 
 [11]
+<asset/post-pruning.png, id=315, 881.2925pt x 465.74pt>
+File: asset/post-pruning.png Graphic file (type png)
+<use asset/post-pruning.png>
+Package pdftex.def Info: asset/post-pruning.png  used on input line 251.
+(pdftex.def)             Requested size: 343.94757pt x 181.76578pt.
+
 
 [12 <./asset/ig2-1.png> <./asset/igr-2.png>]
 
-[13]
+[13 <./asset/post-pruning.png>]
 
 [14]
 
 [15]
 
-[16] (./ds-main.aux)
+[16]
+
+[17] (./ds-main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -815,18 +823,18 @@ Package rerunfilecheck Info: File `ds-main.out' has not changed.
 (rerunfilecheck)             Checksum: A060B45837A1250E920E3DBB0C82984C;7215.
  ) 
 Here is how much of TeX's memory you used:
- 26804 strings out of 473190
- 521637 string characters out of 5704335
- 941511 words of memory out of 5000000
- 49476 multiletter control sequences out of 15000+600000
+ 26819 strings out of 473190
+ 521954 string characters out of 5704335
+ 942602 words of memory out of 5000000
+ 49490 multiletter control sequences out of 15000+600000
  618692 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,8n,101p,1048b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ds-main.pdf (16 pages, 1145009 bytes).
+Output written on ds-main.pdf (17 pages, 1179123 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 352 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
- 35239 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 429 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 35244 words of extra memory for PDF output out of 35830 (max. 10000000)
 

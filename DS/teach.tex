@@ -317,3 +317,38 @@ Also: weight by subset size and keep log base consistent.
 
 \textbf{Key takeaways:} IG is a weighted impurity reduction; higher is better.
 }
+
+% 2.5 Pruning
+\DefineTeach{2.5}{%
+\begin{examlikelihood}{High}
+Often: explain why pruning reduces overfitting and name pre- vs post-pruning.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a tree, identify which branches to prune using validation error or complexity.
+\end{examfavorite}
+
+Why (motivation): Reduce overfitting by simplifying a deep tree.\\
+What (definition): Pruning removes splits/branches that do not improve generalization.\\
+How (procedure/usage): Stop early (pre-pruning) or cut back after training (post-pruning).
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Pre-pruning:} stop splitting early using rules like:
+  max depth, min samples per node, min impurity decrease, min samples per leaf.
+  \item \textbf{Post-pruning:} grow full tree, then prune using validation error or cost-complexity.
+  \item \textbf{Goal:} simpler tree with similar or better validation performance.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Pruning too aggressively can underfit; always tune on validation data, not test data.
+\end{pitfall}
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.75\linewidth]{asset/post-pruning.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} Pruning trades depth for generalization; use validation to choose.
+}

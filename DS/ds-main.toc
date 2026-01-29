@@ -17,29 +17,29 @@
 \contentsline {subsection}{\numberline {2.3}ID3 Algorithm}{9}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Quantifying Information Gain}{10}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Pruning}{12}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Continuous Data (Threshold splits)}{12}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Ensembles (Bagging/Random Forest/Boosting)}{12}{subsection.2.7}%
-\contentsline {section}{\numberline {3}Clustering}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Introduction to Unsupervised Learning}{13}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Introduction to Clustering}{13}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Similarity and Dissimilarity}{13}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}K-means and K-medoids}{13}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Agglomerative Clustering}{13}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}DBSCAN}{13}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Closing}{13}{subsection.3.7}%
-\contentsline {section}{\numberline {4}Frequent Itemsets}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Introduction}{14}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Properties of Frequent Itemsets}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Apriori Algorithm}{14}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}FP-Growth Algorithm}{14}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Association Rules}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Introduction}{15}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Generating Association Rules}{15}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Evaluation (support, confidence, lift, conviction)}{15}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Applications}{15}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Simpson's Paradox}{15}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Time Series}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Temporal Data}{16}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Introduction to Time Series}{16}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Analysis}{16}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Forecasting}{16}{subsection.6.4}%
+\contentsline {subsection}{\numberline {2.6}Continuous Data (Threshold splits)}{13}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Ensembles (Bagging/Random Forest/Boosting)}{13}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Clustering}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introduction to Unsupervised Learning}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Introduction to Clustering}{14}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Similarity and Dissimilarity}{14}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}K-means and K-medoids}{14}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Agglomerative Clustering}{14}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}DBSCAN}{14}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Closing}{14}{subsection.3.7}%
+\contentsline {section}{\numberline {4}Frequent Itemsets}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introduction}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Properties of Frequent Itemsets}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Apriori Algorithm}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}FP-Growth Algorithm}{15}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Association Rules}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Introduction}{16}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Generating Association Rules}{16}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Evaluation (support, confidence, lift, conviction)}{16}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Applications}{16}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Simpson's Paradox}{16}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Time Series}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Temporal Data}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Introduction to Time Series}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Analysis}{17}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Forecasting}{17}{subsection.6.4}%

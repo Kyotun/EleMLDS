@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769722031.49841 "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" "ds-main.pdf" "ds-main" 1769722033.44815 0
+["pdflatex"] 1769722823.72498 "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" "ds-main.pdf" "ds-main" 1769722825.84576 0
   "/Users/kyotun/Desktop/5.semester/EleMLDS/DS/ds-main.tex" 1769719007.58862 9667 2b6a9424205bd2b5565c6cd67e1b8c66 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1741388039 2375 baa924870cfb487815765f9094cf3728 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1741388039 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -208,11 +208,12 @@
   "asset/igr-2.png" 1769718826.42706 78941 ed9455ff7a63c3ae83bcba9d55c5952d ""
   "asset/information-gain.png" 1769707147.89191 216851 e98f279e27f1e18e55f5750254ee0470 ""
   "asset/overall-entropy.png" 1769706864.9441 211930 fb9ed18b9985de6a920e674414bcb3bf ""
-  "ds-main.aux" 1769722033.32914 5875 80de7bbb9db69460a3945f875d4b0088 "pdflatex"
-  "ds-main.out" 1769722033.33043 7215 a060b45837a1250e920e3dbb0c82984c "pdflatex"
+  "asset/post-pruning.png" 1769722501.45432 58583 0cee1ecfe57fc243dec587e6606e2ae1 ""
+  "ds-main.aux" 1769722825.72557 5875 1163ff54a481c8b92946e0a45edb76b9 "pdflatex"
+  "ds-main.out" 1769722825.72681 7215 a060b45837a1250e920e3dbb0c82984c "pdflatex"
   "ds-main.tex" 1769719007.58862 9667 2b6a9424205bd2b5565c6cd67e1b8c66 ""
-  "ds-main.toc" 1769722033.33075 3867 9a548905d53937d23a3b39b7b22cf367 "pdflatex"
-  "teach.tex" 1769722031.39275 11451 ecec3d6c238084e99a2c61cb816f91d2 ""
+  "ds-main.toc" 1769722825.72713 3867 7b43f3fdde8465981c2d2fd918244233 "pdflatex"
+  "teach.tex" 1769722823.62091 12708 a8198c8b8457df1bdea106f93419376d ""
   (generated)
   "ds-main.aux"
   "ds-main.log"
