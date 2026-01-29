@@ -1,0 +1,189 @@
+% !TEX program = pdflatex
+% AI Part — Master Notes Template
+% Compile: pdflatex ai.tex (run twice for TOC links)
+
+\documentclass[11pt,a4paper]{article}
+
+% --------- Packages ----------
+\usepackage[margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage{microtype}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+
+% --------- Hyperref ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  urlcolor=blue!55!black
+}
+
+% --------- Lists ----------
+\setlist[itemize]{leftmargin=*, itemsep=2pt, topsep=4pt}
+\setlist[enumerate]{leftmargin=*, itemsep=2pt, topsep=4pt}
+
+% --------- Visual / Exam Boxes ----------
+\tcbset{
+  colback=white,
+  colframe=black!25,
+  arc=2mm,
+  boxrule=0.6pt,
+  left=1.2mm,right=1.2mm,top=1.2mm,bottom=1.2mm
+}
+
+\newtcolorbox{examlikelihood}[1]{
+  title={Exam likelihood: #1},
+  colframe=blue!55!black
+}
+
+\newtcolorbox{examfavorite}{
+  title={Examiner favorite (what they love to ask)},
+  colframe=red!65!black
+}
+
+\newtcolorbox{pitfall}{
+  title={Common pitfall},
+  colframe=orange!80!black
+}
+
+\newtcolorbox{cheatsheet}{
+  title={Cheat sheet / must-memorize},
+  colframe=green!55!black
+}
+
+\newtcolorbox{visualbox}{
+  title={Visual (for your cortex)},
+  colframe=purple!55!black
+}
+
+% --------- Title ----------
+\title{\textbf{Elements of Machine Learning and Data Science}\\
+\large Part III: AI / Empirical Analysis \& Performance Evaluation — Exam Notes (Living Document)}
+\author{Emir Pisirici}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\vspace{-3mm}
+\begin{examlikelihood}{High (overall AI / Empirical \& Evaluation part)}
+This document is structured to match the lecture topics exactly and is designed for adding
+\textbf{exam-style notes}, \textbf{common traps}, and \textbf{visual summaries}.
+\end{examlikelihood}
+
+\tableofcontents
+
+% ============================================================
+% 15) DATA QUALITY AND PREPROCESSING
+% ============================================================
+\section{Data Quality and Preprocessing}
+
+\subsection{Introduction}
+% --- Add your notes here ---
+
+\subsection{Missing Values}
+% --- Add your notes here ---
+
+\subsection{Outliers}
+% --- Add your notes here ---
+
+\subsection{Transformation \& Normalization}
+% --- Add your notes here ---
+
+\subsection{Reduction}
+% --- Add your notes here ---
+
+% ============================================================
+% 16) RESPONSIBLE DATA SCIENCE
+% ============================================================
+\newpage
+\section{Responsible Data Science}
+
+\subsection{Part I: Introduction to RDS}
+% Keywords from slide: Fairness, accuracy, confidentiality, transparency
+% --- Add your notes here ---
+
+\subsection{Part II: Confidentiality}
+% Keywords from slide: Risks, encryption, anonymization, quasi-identifiers,
+% K-Anonymity, L-Diversity, T-Closeness
+% --- Add your notes here ---
+
+\subsubsection{Risks}
+% --- Add your notes here ---
+
+\subsubsection{Encryption}
+% --- Add your notes here ---
+
+\subsubsection{Anonymization}
+% --- Add your notes here ---
+
+\subsubsection{Quasi-identifiers}
+% --- Add your notes here ---
+
+\subsubsection{K-Anonymity}
+% --- Add your notes here ---
+
+\subsubsection{L-Diversity}
+% --- Add your notes here ---
+
+\subsubsection{T-Closeness}
+% --- Add your notes here ---
+
+\subsection{Part III: Fairness}
+% Keywords from slide: Fairness measures, itemsets/association rules revisited,
+% effect (rule/outcome), making decision trees fair
+% --- Add your notes here ---
+
+\subsubsection{Fairness measures}
+% --- Add your notes here ---
+
+\subsubsection{Itemsets / association rules revisited}
+% --- Add your notes here ---
+
+\subsubsection{Effect (rule / outcome)}
+% --- Add your notes here ---
+
+\subsubsection{Making decision trees fair}
+% --- Add your notes here ---
+
+% ============================================================
+% 17) EVALUATION
+% ============================================================
+\newpage
+\section{Evaluation}
+
+\subsection{Key Questions for Evaluation}
+% --- Add your notes here ---
+
+\subsubsection{How good is an ML model?}
+% --- Add your notes here ---
+
+\subsubsection{How good could an ML model be?}
+% --- Add your notes here ---
+
+% ============================================================
+% 18) PERFORMANCE OPTIMIZATION
+% ============================================================
+\newpage
+\section{Performance Optimization}
+
+\subsection{Hyperparameter Optimization}
+% --- Add your notes here ---
+
+\subsection{Model Selection}
+% --- Add your notes here ---
+
+% ============================================================
+% END
+% ============================================================
+\end{document}
