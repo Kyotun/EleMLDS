@@ -22,6 +22,8 @@
 % % Why (motivation): ...
 % % What (definition): ...
 % % How (procedure/usage): ...
+% % Advantages: ...\\
+% % Limitations: ...
 % %
 % % \begin{cheatsheet}
 % % \begin{itemize}
@@ -50,16 +52,21 @@
 \centering
 \includegraphics[width=0.9\linewidth]{asset/data-types.png}
 \end{visualbox}
+
+Advantages: clarifies variable handling and measurement choices.\\
+Limitations: real data can mix types or sit between categories.
 }
 
 % 1.5 Descriptive Statistics
 \DefineTeach{1.5}{%
 \begin{examlikelihood}{High}
 Frequent: compute variance/STD/covariance/correlation by hand; read a correlation matrix.
+Answer: apply sample formulas, compute values, and interpret sign/magnitude; matrix is symmetric with 1s on the diagonal.
 \end{examlikelihood}
 
 \begin{examfavorite}
 Explain why covariance depends on units, and why correlation is normalized in $[-1,1]$.
+Answer: covariance scales with units; correlation divides by SDs so it is unitless and bounded.
 \end{examfavorite}
 
 Why (motivation): Quantify spread and association between variables.\\
@@ -79,6 +86,9 @@ How (procedure/usage): Compute formulas, then interpret sign/magnitude and check
 \begin{pitfall}
 Correlation $\neq$ causation; a strong correlation can be driven by a confounder or Simpson's paradox.
 \end{pitfall}
+
+Advantages: quick, compact summaries of spread and association.\\
+Limitations: can hide distribution shape and outliers.
 
 \begin{visualbox}
 \centering
@@ -113,16 +123,21 @@ Correlation $\neq$ causation; a strong correlation can be driven by a confounder
 \centering
 \includegraphics[width=0.9\linewidth]{asset/box-plot.png}
 \end{visualbox}
+
+Advantages: makes distribution and outliers visible at a glance.\\
+Limitations: can hide multimodality or sample size differences.
 }
 
 % 1.7 Feature Transformations
 \DefineTeach{1.7}{%
 \begin{examlikelihood}{High}
 Typical: pick the right transform (scale, log, encode) and explain why.
+Answer: choose encoding by category type and scaling/log for skew; justify the choice.
 \end{examlikelihood}
 
 \begin{examfavorite}
 Identify data leakage in preprocessing; name the correct order for train/test transformations.
+Answer: fit transforms on training data only, then apply to validation/test.
 \end{examfavorite}
 
 Why (motivation): Turn raw categorical/continuous variables into model-ready features.\\
@@ -144,6 +159,9 @@ How (procedure/usage): Choose encoding by category type; choose binning by distr
 Fitting transforms on the full dataset (leakage). Always fit on training data, then apply to validation/test.
 \end{pitfall}
 
+Advantages: improves model performance and stability.\\
+Limitations: can reduce interpretability or introduce leakage if misapplied.
+
 \textbf{Key takeaways:} Use one-hot for nominal, ordinal for ordered labels, and binning for simplification.
 }
 
@@ -151,10 +169,12 @@ Fitting transforms on the full dataset (leakage). Always fit on training data, t
 \DefineTeach{2.1}{%
 \begin{examlikelihood}{High}
 Intro questions often ask you to explain how trees split data and what leaves represent.
+Answer: describe root/internal/leaf roles and how splits partition the feature space.
 \end{examlikelihood}
 
 \begin{examfavorite}
 Draw a small tree from a toy dataset or explain interpretability vs overfitting.
+Answer: build simple if-then splits and note that deeper trees overfit without pruning.
 \end{examfavorite}
 
 Why (motivation): Learn a function from labeled training instances to make predictions.\\
@@ -173,6 +193,9 @@ How (procedure/usage): Choose splits to improve class purity or reduce predictio
 \begin{pitfall}
 Overly deep trees memorize training data; control with max depth, min samples, or pruning.
 \end{pitfall}
+
+Advantages: interpretable rules and fast inference.\\
+Limitations: high variance and prone to overfitting without pruning.
 
 \begin{visualbox}
 \centering
@@ -200,10 +223,12 @@ Overly deep trees memorize training data; control with max depth, min samples, o
 \DefineTeach{2.2}{%
 \begin{examlikelihood}{Very High}
 Almost guaranteed: compute entropy and information gain for candidate splits.
+Answer: compute parent entropy, weighted child entropies, then IG.
 \end{examlikelihood}
 
 \begin{examfavorite}
 Given a small labeled dataset, compare splits and pick the one with highest information gain.
+Answer: calculate IG for each split and select the largest.
 \end{examfavorite}
 
 Why (motivation): Choose splits that make child nodes as pure as possible.\\
@@ -223,6 +248,9 @@ How (procedure/usage): Compute parent entropy, child entropies, then IG = parent
 Forgetting to weight child entropies by subset size; using raw entropy sums gives wrong IG.
 \end{pitfall}
 
+Advantages: principled split criterion that increases purity.\\
+Limitations: IG is biased toward many-valued attributes.
+
 \begin{visualbox}
 \centering
 \includegraphics[width=0.75\linewidth]{asset/entropy-formula.png}
@@ -239,10 +267,12 @@ Forgetting to weight child entropies by subset size; using raw entropy sums give
 \DefineTeach{2.3}{%
 \begin{examlikelihood}{Very High}
 Common: list the ID3 steps or run one iteration to choose the best split.
+Answer: check stopping, compute IG per attribute, split on max IG, recurse.
 \end{examlikelihood}
 
 \begin{examfavorite}
 Explain stopping conditions and why ID3 prefers high information gain.
+Answer: stop if pure/no attributes; IG maximizes impurity reduction.
 \end{examfavorite}
 
 Why (motivation): Build a decision tree that best separates labeled data.\\
@@ -264,6 +294,9 @@ How (procedure/usage): Compute IG for each attribute, split on the best, and rec
 ID3 favors attributes with many values; without corrections (e.g., gain ratio) it can overfit.
 \end{pitfall}
 
+Advantages: simple, fast, and easy to explain.\\
+Limitations: greedy (not optimal), biased to many-valued attributes.
+
 \begin{visualbox}
 \centering
 \includegraphics[width=0.75\linewidth]{asset/id3-algo.png}
@@ -280,10 +313,12 @@ ID3 favors attributes with many values; without corrections (e.g., gain ratio) i
 \DefineTeach{2.4}{%
 \begin{examlikelihood}{Very High}
 Often compute IG for a specific split and compare candidate attributes.
+Answer: show parent entropy, weighted children, and IG (optionally gain ratio).
 \end{examlikelihood}
 
 \begin{examfavorite}
 Show all intermediate steps: parent entropy, each child entropy, weighted sum, IG.
+Answer: compute each step explicitly and report the final IG (and GR if asked).
 \end{examfavorite}
 
 Why (motivation): Convert “best split” into a concrete, comparable number.\\
@@ -308,6 +343,9 @@ Information gain is biased toward attributes with many values; use gain ratio to
 Also: weight by subset size and keep log base consistent.
 \end{pitfall}
 
+Advantages: makes split comparisons explicit and quantitative.\\
+Limitations: IG can favor attributes with many values without normalization.
+
 \begin{visualbox}
 \centering
 \includegraphics[width=0.75\linewidth]{asset/ig2-1.png}
@@ -322,10 +360,12 @@ Also: weight by subset size and keep log base consistent.
 \DefineTeach{2.5}{%
 \begin{examlikelihood}{High}
 Often: explain why pruning reduces overfitting and name pre- vs post-pruning.
+Answer: pruning removes low-value branches to reduce variance; name pre/post pruning.
 \end{examlikelihood}
 
 \begin{examfavorite}
 Given a tree, identify which branches to prune using validation error or complexity.
+Answer: prune branches that do not improve validation performance or reduce cost-complexity.
 \end{examfavorite}
 
 Why (motivation): Reduce overfitting by simplifying a deep tree.\\
@@ -345,10 +385,578 @@ How (procedure/usage): Stop early (pre-pruning) or cut back after training (post
 Pruning too aggressively can underfit; always tune on validation data, not test data.
 \end{pitfall}
 
+Advantages: improves generalization by reducing variance.\\
+Limitations: too much pruning increases bias.
+
 \begin{visualbox}
 \centering
 \includegraphics[width=0.75\linewidth]{asset/post-pruning.png}
 \end{visualbox}
 
 \textbf{Key takeaways:} Pruning trades depth for generalization; use validation to choose.
+}
+
+% 2.6 Continuous Data (Threshold splits)
+\DefineTeach{2.6}{%
+\begin{examlikelihood}{High}
+Common: show how a continuous feature is split using a threshold and compute the best split score.
+Answer: sort values, test midpoints, and choose the split with highest IG (or variance reduction).
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given sorted values, test candidate thresholds and pick the one with maximum information gain.
+Answer: evaluate IG at valid midpoints and choose the maximum.
+\end{examfavorite}
+
+Why (motivation): Many real-world features are continuous; trees need a simple yes/no split.\\
+What (definition): A threshold split picks a value $t$ so that $x_j \le t$ goes left and $x_j > t$ goes right.\\
+How (procedure/usage): Sort values, test candidate thresholds (midpoints between distinct neighbors), compute split score, choose best, recurse.
+
+Variance in a node/leaf (regression trees): For a node with targets $y_1,\dots,y_n$ and mean $\bar{y}$,
+the node variance (impurity) is the average squared deviation from the mean; a good split minimizes the
+weighted variance of the child nodes (equivalently, maximizes variance reduction).
+
+\textbf{Mini example (regression):} Data $(x,y)$ = $(1,2),(2,2),(3,3),(4,10),(5,11),(6,12)$.\\
+Parent variance $\approx 19.22$. Try two thresholds:
+\begin{itemize}
+  \item $t=3.5$: left $y=\{2,2,3\}$ var $\approx 0.22$, right $y=\{10,11,12\}$ var $\approx 0.67$.
+  Weighted variance $=(3/6)\cdot 0.22 + (3/6)\cdot 0.67 \approx 0.45$.
+  \item $t=1.5$: left $y=\{2\}$ var $=0$, right $y=\{2,3,10,11,12\}$ var $\approx 17.84$.
+  Weighted variance $\approx (5/6)\cdot 17.84 = 14.87$.
+\end{itemize}
+So $t=3.5$ is preferred because it gives much lower weighted variance.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Split rule:} $x_j \le t$ vs $x_j > t$ (binary split).
+  \item \textbf{Candidates:} midpoints between sorted unique values; often only where class label changes.
+  \item \textbf{Score (classification):} maximize information gain (IG).
+  \item \textbf{Variance in a node:} $\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2$ (SSE/variance impurity).
+  \item \textbf{Score (regression):} minimize weighted child variance / MSE (maximize variance reduction).
+  \item \textbf{Efficiency:} sort once ($O(n\log n)$), then sweep thresholds.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Using thresholds that create empty or nearly empty children (e.g., duplicates without midpoints); always use distinct values and check child sizes.
+\end{pitfall}
+
+Advantages: enables trees to handle continuous features.\\
+Limitations: many candidate splits; sensitive to noise/outliers.
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.78\linewidth]{asset/continuous-decision1.png}
+\vspace{2mm}
+\includegraphics[width=0.78\linewidth]{asset/continuous-decision2.png}
+\vspace{2mm}
+\includegraphics[width=0.78\linewidth]{asset/continuous-decision3.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} Continuous features are split by thresholds; evaluate candidate midpoints and pick the best impurity reduction.
+}
+
+% 2.7 Ensembles (Bagging/Random Forest/Boosting)
+\DefineTeach{2.7}{%
+\begin{examlikelihood}{High}
+Short theory questions about why ensembles help and how they are built are common.
+Answer: averaging many trees reduces variance and stabilizes predictions.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Explain bias--variance intuition: averaging many trees reduces variance and improves stability.
+Answer: averaging cancels noise, lowering variance and improving generalization.
+\end{examfavorite}
+
+Why (motivation): Single trees are high-variance; ensembles stabilize predictions and improve accuracy.\\
+What (definition): An ensemble combines many base models (often trees) into one predictor.\\
+How (procedure/usage): Train multiple trees (e.g., on resampled data) and aggregate their outputs by vote or average.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Goal:} reduce variance and improve generalization.
+  \item \textbf{Combine:} predictions are averaged (regression) or majority-voted (classification).
+  \item \textbf{Intuition:} many weak/unstable trees $\rightarrow$ one strong, stable predictor.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Thinking more trees always fix bias; ensembles mainly reduce variance, not poor features or labels.
+\end{pitfall}
+
+Advantages: strong accuracy and stability.\\
+Limitations: reduced interpretability and higher compute.
+
+\begin{visualbox}
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners, align=center, minimum width=20mm, minimum height=6mm},
+  arrow/.style={-Latex, thick},
+  node distance=6mm and 8mm
+]
+\node[box] (data) {Data};
+\node[box, right=of data] (t1) {Tree 1};
+\node[box, above=of t1] (t2) {Tree 2};
+\node[box, below=of t1] (t3) {Tree 3};
+\node[box, right=of t1] (agg) {Vote/Avg};
+\draw[arrow] (data) -- (t1);
+\draw[arrow] (data) -- (t2);
+\draw[arrow] (data) -- (t3);
+\draw[arrow] (t1) -- (agg);
+\draw[arrow] (t2) -- (agg);
+\draw[arrow] (t3) -- (agg);
+\end{tikzpicture}
+\end{visualbox}
+
+\textbf{Key takeaways:} Ensembles combine many trees to reduce variance and stabilize predictions.
+}
+
+% 3.1 Introduction to Unsupervised Learning
+\DefineTeach{3.1}{%
+\begin{examlikelihood}{High}
+Often asked: define unsupervised learning and contrast it with supervised learning.
+Answer: unsupervised has no labels; it discovers structure like clusters.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Explain what “no labels” means and give a concrete task like clustering or dimensionality reduction.
+Answer: only $X$ is given; tasks include clustering and dimensionality reduction.
+\end{examfavorite}
+
+Why (motivation): Labels are expensive or unavailable; we still want structure in the data.\\
+What (definition): Unsupervised learning finds patterns, groups, or low‑dimensional structure without target labels.\\
+How (procedure/usage): Choose a goal (grouping, structure, anomaly detection), define a similarity measure, then apply an algorithm.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{No labels:} only $X$ (features), no $y$.
+  \item \textbf{Main tasks:} clustering, dimensionality reduction, anomaly detection.
+  \item \textbf{Key idea:} “similar” points should end up close or in the same group.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Interpreting clusters as ground truth classes without validation; clusters depend on distance metrics and scaling.
+\end{pitfall}
+
+Advantages: finds structure without labels.\\
+Limitations: results can be subjective and metric-dependent.
+
+\textbf{Key takeaways:} Unsupervised learning discovers structure without labels; clustering groups similar points.
+}
+
+% 3.2 Introduction to Clustering
+\DefineTeach{3.2}{%
+\begin{examlikelihood}{High}
+Expect definitions and a short compare/contrast of clustering goals or algorithms.
+Answer: clustering groups similar points; results depend on metric and method.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Explain what a cluster is and why distance/similarity choice matters.
+Answer: clusters maximize within-group similarity; metric choice changes the grouping.
+\end{examfavorite}
+
+Why (motivation): We want to group similar observations when no labels exist.\\
+What (definition): Clustering partitions data into groups so points in the same cluster are more similar to each other than to points in other clusters.\\
+How (procedure/usage): Choose a similarity/distance metric, pick a clustering method, then evaluate/interpret the groups.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Goal:} high within‑cluster similarity, low between‑cluster similarity.
+  \item \textbf{Distance matters:} Euclidean, Manhattan, cosine, etc., change the result.
+  \item \textbf{Outputs:} cluster labels (hard) or membership scores (soft).
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Clustering is not “ground truth”; different scaling or distance metrics can change clusters drastically.
+\end{pitfall}
+
+Advantages: reveals hidden group structure.\\
+Limitations: sensitive to metric, scale, and algorithm choice.
+
+\textbf{Key takeaways:} Clustering groups similar points; metric choice and scaling drive the result.
+}
+
+% 3.3 Similarity and Dissimilarity
+\DefineTeach{3.3}{%
+\begin{examlikelihood}{High}
+Common: compute a distance/similarity and explain when to use each metric.
+Answer: apply the correct formula and justify the metric for the data type.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Compare Euclidean vs Manhattan vs cosine; note the role of scaling/normalization.
+Answer: Euclidean (L2) vs Manhattan (L1) for continuous data, cosine for direction; scale features first.
+\end{examfavorite}
+
+Why (motivation): Clustering depends on “closeness”; wrong metric gives wrong groups.\\
+What (definition): Similarity measures how alike points are; dissimilarity (distance) measures how far apart they are.\\
+How (procedure/usage): Choose a metric that matches data type and scale; normalize features when needed.
+
+\textbf{Goal statement:} Maximize similarity within the same group and maximize dissimilarity between different groups.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Jaccard (nominal/binary):} $J(A,B)=\frac{|A\cap B|}{|A\cup B|}$; distance $d_J=1-J$.
+  \item \textbf{Minkowski (continuous):} $d_p(x,y)=\left(\sum_i |x_i-y_i|^p\right)^{1/p}$.
+  \item \textbf{Manhattan:} $d_1=\sum_i |x_i-y_i|$ (Minkowski with $p=1$).
+  \item \textbf{Euclidean:} $d_2=\sqrt{\sum_i (x_i-y_i)^2}$ (Minkowski with $p=2$).
+  \item \textbf{Chebyshev:} $d_\infty=\max_i |x_i-y_i|$ (Minkowski as $p\to\infty$).
+  \item \textbf{Scaling:} standardize/normalize when units differ.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Using Euclidean on unscaled features (one large‑unit feature dominates).
+\end{pitfall}
+
+Advantages: lets you tailor similarity to data type.\\
+Limitations: wrong metric or scaling yields misleading clusters.
+
+\textbf{Which to use (rule of thumb):}
+\begin{itemize}
+  \item \textbf{Jaccard:} nominal/binary attributes or set‑like data (presence/absence).
+  \item \textbf{Manhattan:} high‑dimensional data or when you want axis‑aligned distance.
+  \item \textbf{Euclidean:} continuous features with comparable scale and spherical clusters.
+  \item \textbf{Chebyshev:} when the maximum coordinate difference is what matters (strict tolerance).
+\end{itemize}
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.8\linewidth]{asset/similarity.png}
+\vspace{2mm}
+\includegraphics[width=0.8\linewidth]{asset/similarity2.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} Metric choice and scaling control the notion of similarity and the resulting clusters.
+}
+
+% 3.4 K-means and K-medoids
+\DefineTeach{3.4}{%
+\begin{examlikelihood}{High}
+Often: list K-means steps and compare K-means vs K-medoids.
+Answer: K-means = init/assign/update/repeat; K-medoids uses medoids and is more robust.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Run 1 iteration of K-means by hand (assign \& update) or explain why K-medoids is more robust to outliers.
+Answer: compute distances, assign clusters, recompute means; medoids resist outliers.
+\end{examfavorite}
+
+Why (motivation): Need a simple, scalable way to cluster continuous data.\\
+What (definition): K-means uses centroids (means) to minimize within‑cluster SSE; K-medoids uses actual data points as centers and minimizes total within‑cluster distance.\\
+How (procedure/usage): Initialize $k$ centers, assign each point to nearest center, update centers, repeat until convergence.
+
+\textbf{Comparison:} K-means is faster but sensitive to outliers and scaling; K-medoids is more robust but slower.\\
+\textbf{Difference:} K-means centers are means (can be non‑data points); K-medoids centers are actual data points.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{K-means objective:} minimize $\sum_{k=1}^{K}\sum_{x_i\in C_k}\|x_i-\mu_k\|^2$.
+  \item \textbf{K-means steps:} (1) choose $K$ and initialize $\mu_k$;
+  (2) assign each point to nearest $\mu_k$;
+  (3) update $\mu_k$ to the mean of its cluster;
+  (4) repeat 2–3 until assignments stop changing.
+  \item \textbf{K-means optimization:} alternating minimization (assignment step + centroid update); decreases SSE each iteration.
+  \item \textbf{K-medoids center:} medoid $m_k$ is a data point minimizing total distance in its cluster.
+  \item \textbf{K-medoids steps:} (1) choose $K$ medoids $m_k$;
+  (2) assign each point to nearest medoid;
+  (3) for each cluster, swap medoid candidate to reduce total distance;
+  (4) repeat 2–3 until no improvement.
+  \item \textbf{K-medoids optimization:} minimize $\sum_{k}\sum_{x_i\in C_k} d(x_i,m_k)$ via swap heuristics (e.g., PAM); monotonic improvement, not guaranteed global optimum.
+  \item \textbf{Robustness:} K-medoids less sensitive to outliers than K-means.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+K-means assumes roughly spherical clusters, is sensitive to scaling/initialization, and handles outliers poorly.
+K-medoids is more robust but slower on large datasets.
+\end{pitfall}
+
+Advantages: K-means is fast; K-medoids is robust.\\
+Limitations: K-means sensitive to outliers; K-medoids is slower.
+
+\textbf{Key takeaways:} K-means is fast but sensitive; K-medoids is more robust but costlier.
+}
+
+% 3.5 Agglomerative Clustering
+\DefineTeach{3.5}{%
+\begin{examlikelihood}{High}
+Common: list agglomerative steps and compute one merge with a given linkage.
+Answer: start with singletons, merge closest by linkage, update distances, repeat.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a small distance matrix, perform one or two agglomerative merges and state the linkage used.
+Answer: compute linkage distances and merge the smallest pair step by step.
+\end{examfavorite}
+
+Why (motivation): We want a hierarchy of clusters and do not want to pre‑specify $K$.\\
+What (definition): Agglomerative hierarchical clustering starts with each point as its own cluster and repeatedly merges the closest clusters.\\
+How (procedure/usage): Choose a distance metric + linkage rule, then merge until one cluster remains (cut the dendrogram to pick $K$).
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Algorithm (simplified):} start with $n$ singleton clusters; compute inter‑cluster distances; merge closest pair; update distances; repeat.
+  \item \textbf{Single linkage:} $d(A,B)=\min_{x\in A,y\in B} d(x,y)$.
+  \item \textbf{Complete linkage:} $d(A,B)=\max_{x\in A,y\in B} d(x,y)$.
+  \item \textbf{Average linkage:} $d(A,B)=\frac{1}{|A||B|}\sum_{x\in A}\sum_{y\in B} d(x,y)$.
+  \item \textbf{Centroid linkage:} $d(A,B)=\|\mu_A-\mu_B\|$.
+  \item \textbf{Ward:} merge that yields the smallest increase in within‑cluster SSE.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Single linkage can “chain” clusters; results depend heavily on scaling and the chosen linkage.
+\end{pitfall}
+
+Advantages: produces a full hierarchy; no need to choose $K$ upfront.\\
+Limitations: $O(n^2)$ memory/time; early merges are irreversible.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.18\textheight]{asset/dendogram1.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/dendogram2.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/dendogram3.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/dendogram4.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} Agglomerative builds a dendrogram using a linkage rule; choose the cut for $K$.
+}
+
+% 3.6 DBSCAN
+\DefineTeach{3.6}{%
+\begin{examlikelihood}{High}
+Often: define $\varepsilon$ and MinPts, classify core/border/noise points.
+Answer: core has $\ge$ MinPts in $\varepsilon$-neighborhood; border within $\varepsilon$ of a core; noise otherwise.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a small plot, label core/border/noise and explain why DBSCAN finds non‑spherical clusters.
+Answer: use density reachability; clusters can follow arbitrary shapes.
+\end{examfavorite}
+
+Why (motivation): K‑based methods struggle with arbitrary shapes and noise.\\
+What (definition): DBSCAN groups dense regions using $\varepsilon$‑neighborhoods and MinPts; points in sparse regions become noise.\\
+How (procedure/usage): Pick $\varepsilon$ and MinPts, mark core points, expand clusters via density reachability, label remaining as noise/border.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Parameters:} $\varepsilon$ (radius), MinPts (minimum neighbors).
+  \item \textbf{Core point:} has at least MinPts points in its $\varepsilon$‑neighborhood.
+  \item \textbf{Border point:} within $\varepsilon$ of a core but not itself core.
+  \item \textbf{Noise:} not reachable from any core.
+  \item \textbf{Density‑reachable/connected:} chains of core points link a cluster.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Bad $\varepsilon$/MinPts choices: too small $\rightarrow$ many noise points; too large $\rightarrow$ merged clusters.
+\end{pitfall}
+
+\textbf{Advantages:} no need to choose $K$; finds arbitrary‑shaped clusters; handles noise well.\\
+\textbf{Limitations:} struggles with varying density; parameter sensitive; distance metrics degrade in high dimensions.
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.8\linewidth]{asset/DBSCAN.png}
+\vspace{2mm}
+\includegraphics[width=0.8\linewidth]{asset/DBSCAN2.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} DBSCAN clusters by density and naturally flags noise; choose $\varepsilon$ and MinPts carefully.
+}
+
+% 4.1 Introduction (Frequent Itemsets)
+\DefineTeach{4.1}{%
+\begin{examlikelihood}{High}
+Often: define itemset, support, and why frequent itemsets matter.
+Answer: itemset is a set of items; support is fraction of transactions; frequent if above minsup.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Compute support for a small transaction set and identify frequent itemsets above a threshold.
+Answer: count transactions containing the itemset, divide by total, compare to minsup.
+\end{examfavorite}
+
+Why (motivation): Discover co‑occurrence patterns in transaction data (e.g., market baskets).\\
+What (definition): An itemset is a set of items; a frequent itemset appears in at least a minimum fraction of transactions.\\
+How (procedure/usage): Count itemset support across transactions and keep those meeting a minimum support threshold.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Transaction DB:} each transaction is a set of items.
+  \item \textbf{Itemset:} a subset of items (e.g., $\{A,B\}$).
+  \item \textbf{Support:} $\mathrm{supp}(X)=\frac{\#\text{transactions containing }X}{\#\text{transactions}}$.
+  \item \textbf{Frequent:} $\mathrm{supp}(X)\ge \text{min\_support}$.
+  \item \textbf{Apriori idea:} if an itemset is frequent, all its subsets are frequent.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Mixing up support count (absolute) vs support (fraction); always state which one you use.
+\end{pitfall}
+
+Advantages: highlights common co-occurrence patterns.\\
+Limitations: can generate many itemsets; sensitive to min support.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.18\textheight]{asset/frequent-itemset.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/frequent-itemset2.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/frequent-itemset3.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/frequent-itemset4.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} Frequent itemsets reveal common co‑occurrences; support is the key measure.
+}
+
+% 4.2 Properties of Frequent Itemsets
+\DefineTeach{4.2}{%
+\begin{examlikelihood}{High}
+Often: define closed vs maximal itemsets and compare them with frequent itemsets.
+Answer: closed has no superset with same support; maximal has no frequent superset.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a small set of frequent itemsets, identify which are closed and which are maximal.
+Answer: maximal = no frequent superset; closed = no superset with equal support.
+\end{examfavorite}
+
+Why (motivation): Frequent itemsets can be many; closed/maximal summarize them compactly.\\
+What (definition): Closed itemsets keep full support information; maximal itemsets keep only the largest frequent ones.\\
+How (procedure/usage): Mine frequent itemsets first, then filter for closed or maximal conditions.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Frequent:} $\mathrm{supp}(X)\ge \text{min\_support}$.
+  \item \textbf{Closed:} no proper superset of $X$ has the \emph{same} support.
+  \item \textbf{Maximal:} no proper superset of $X$ is frequent.
+  \item \textbf{Relationship:} Maximal $\subset$ Closed $\subset$ Frequent.
+  \item \textbf{Info loss:} Maximal loses support counts; closed preserves supports for all frequent itemsets.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Confusing “closed” with “maximal”: closed allows frequent supersets as long as support drops; maximal allows no frequent supersets.
+\end{pitfall}
+
+Advantages: closed/maximal reduce output size.\\
+Limitations: maximal loses support info; closed can still be large.
+
+\begin{visualbox}
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners, minimum width=36mm, minimum height=7mm, align=center}
+]
+\node[box] (freq) {Frequent};
+\node[box, below=4mm of freq] (closed) {Closed};
+\node[box, below=4mm of closed] (max) {Maximal};
+\draw[->, thick] (freq) -- (closed);
+\draw[->, thick] (closed) -- (max);
+\end{tikzpicture}
+\end{visualbox}
+
+\textbf{Key takeaways:} Closed keeps support info; maximal is a compact summary but loses support counts.
+}
+
+% 4.3 Apriori Algorithm
+\DefineTeach{4.3}{%
+\begin{examlikelihood}{High}
+Common: outline Apriori steps and generate $C_k$ and $L_k$ for a tiny dataset.
+Answer: build $L_1$, generate/prune $C_k$, count supports, repeat to get $L_k$.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Show candidate generation and pruning using the Apriori property.
+Answer: join $L_{k-1}$ to form $C_k$, prune any candidate with an infrequent subset.
+\end{examfavorite}
+
+Why (motivation): Brute‑force itemset search is exponential; Apriori prunes early.\\
+What (definition): Apriori uses the downward‑closure property: all subsets of a frequent itemset are frequent.\\
+How (procedure/usage): Iteratively generate candidates and prune using frequent subsets.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Step 1:} find frequent 1‑itemsets $L_1$.
+  \item \textbf{Step 2:} generate candidate $k$‑itemsets $C_k$ from $L_{k-1}$ (join step).
+  \item \textbf{Step 3:} prune any candidate in $C_k$ with an infrequent $(k-1)$‑subset.
+  \item \textbf{Step 4:} scan DB to count supports; keep $L_k$ (frequent candidates).
+  \item \textbf{Stop:} when $L_k$ is empty.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Forgetting the prune step (using the Apriori property) leads to too many candidates.
+\end{pitfall}
+
+\textbf{Advantages:} strong pruning via downward‑closure; easy to implement and explain.\\
+\textbf{Limitations:} challenging candidate generation; each candidate must be tested against the whole dataset.
+
+\begin{visualbox}
+\centering
+\includegraphics[width=0.78\linewidth]{asset/apriori.png}
+\vspace{2mm}
+\includegraphics[width=0.78\linewidth]{asset/apriori2.png}
+\vspace{2mm}
+\includegraphics[width=0.78\linewidth]{asset/apriori3.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} Apriori alternates candidate generation and pruning using downward‑closure.
+}
+
+% 4.4 FP-Growth Algorithm
+\DefineTeach{4.4}{%
+\begin{examlikelihood}{High}
+Often: explain why FP‑Growth is faster than Apriori and outline its steps.
+Answer: no candidate generation; build FP-tree in two passes and mine with DFS.
+\end{examlikelihood}
+
+\begin{examfavorite}
+State the two DB passes and describe the FP‑tree + conditional pattern base idea.
+Answer: pass 1 counts and orders items; pass 2 builds FP-tree; mine conditional bases/trees by DFS.
+\end{examfavorite}
+
+Why (motivation): Apriori’s candidate explosion and repeated full scans are costly.\\
+What (definition): FP‑Growth mines frequent itemsets by building an FP‑tree and doing DFS on conditional pattern bases (no candidate generation).\\
+How (procedure/usage): Make two passes, build the FP‑tree, then recursively mine conditional FP‑trees (depth‑first).
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Pass 1:} count item supports; keep frequent items and order them.
+  \item \textbf{Pass 2:} build FP‑tree by inserting ordered transactions.
+  \item \textbf{DFS mining:} for each item, build its conditional pattern base and conditional FP‑tree; recurse.
+  \item \textbf{Output:} frequent itemsets without candidate generation.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Not ordering items by global frequency before building the FP‑tree (tree becomes large and inefficient).
+\end{pitfall}
+
+\textbf{Advantages:} avoids candidate generation; only two DB passes; efficient for dense datasets.\\
+\textbf{Limitations:} FP‑tree can be large in very sparse data; more complex to implement.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.18\textheight]{asset/fp-tree0.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/fp-tree1.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/fp-tree2.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/fp-tree3.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/fp-tree4.png}
+\end{visualbox}
+
+\textbf{Key takeaways:} FP‑Growth uses an FP‑tree and DFS to mine patterns with only two passes.
 }

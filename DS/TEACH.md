@@ -22,6 +22,7 @@
   - `pitfall` (common mistakes)
   - `visualbox` (a small visual; use TikZ if helpful)
 - Keep each box short and focused; use bullets where possible.
+- Add explicit \textbf{Advantages:} and \textbf{Limitations:} lines for every section.
 
 ## Explanation style
 - Start with the “why” (motivation), then the “what” (definition), then the “how” (procedure).

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 JAN 2026 22:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  30 JAN 2026 23:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -726,12 +726,13 @@ File: asset/data-types.png Graphic file (type png)
 <use asset/data-types.png>
 Package pdftex.def Info: asset/data-types.png  used on input line 220.
 (pdftex.def)             Requested size: 412.73428pt x 138.12708pt.
+
+
+[4{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} <./asset/data-types.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 223.
  (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-
-[4{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} <./asset/data-types.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 223.
 <asset/box-plot.png, id=262, 483.8075pt x 227.85126pt>
@@ -763,58 +764,212 @@ Package pdftex.def Info: asset/information-gain.png  used on input line 243.
 (pdftex.def)             Requested size: 343.94757pt x 186.72383pt.
 
 
-[8 <./asset/entropy-formula.png> <./asset/overall-entropy.png> <./asset/information-gain.png>]
-<asset/id3-algo.png, id=295, 519.9425pt x 281.05pt>
+[8]
+
+[9 <./asset/entropy-formula.png> <./asset/overall-entropy.png> <./asset/information-gain.png>]
+<asset/id3-algo.png, id=299, 519.9425pt x 281.05pt>
 File: asset/id3-algo.png Graphic file (type png)
 <use asset/id3-algo.png>
 Package pdftex.def Info: asset/id3-algo.png  used on input line 249.
 (pdftex.def)             Requested size: 343.94757pt x 185.91812pt.
-<asset/id3-example1.png, id=296, 557.08125pt x 307.1475pt>
+<asset/id3-example1.png, id=300, 557.08125pt x 307.1475pt>
 File: asset/id3-example1.png Graphic file (type png)
 <use asset/id3-example1.png>
 Package pdftex.def Info: asset/id3-example1.png  used on input line 249.
 (pdftex.def)             Requested size: 343.94757pt x 189.63742pt.
-<asset/id3-example2.png, id=297, 539.01375pt x 309.155pt>
+<asset/id3-example2.png, id=301, 539.01375pt x 309.155pt>
 File: asset/id3-example2.png Graphic file (type png)
 <use asset/id3-example2.png>
 Package pdftex.def Info: asset/id3-example2.png  used on input line 249.
 (pdftex.def)             Requested size: 343.94757pt x 197.27356pt.
 
 
-[9]
+[10]
 
-[10 <./asset/id3-algo.png> <./asset/id3-example1.png> <./asset/id3-example2.png>]
-<asset/ig2-1.png, id=309, 883.3pt x 357.335pt>
+[11 <./asset/id3-algo.png> <./asset/id3-example1.png> <./asset/id3-example2.png>]
+<asset/ig2-1.png, id=313, 883.3pt x 357.335pt>
 File: asset/ig2-1.png Graphic file (type png)
 <use asset/ig2-1.png>
 Package pdftex.def Info: asset/ig2-1.png  used on input line 250.
 (pdftex.def)             Requested size: 343.94757pt x 139.14198pt.
-<asset/igr-2.png, id=310, 883.3pt x 493.845pt>
+<asset/igr-2.png, id=314, 883.3pt x 493.845pt>
 File: asset/igr-2.png Graphic file (type png)
 <use asset/igr-2.png>
 Package pdftex.def Info: asset/igr-2.png  used on input line 250.
 (pdftex.def)             Requested size: 343.94757pt x 192.29735pt.
 
 
-[11]
-<asset/post-pruning.png, id=315, 881.2925pt x 465.74pt>
+[12]
+
+[13 <./asset/ig2-1.png> <./asset/igr-2.png>]
+<asset/post-pruning.png, id=326, 881.2925pt x 465.74pt>
 File: asset/post-pruning.png Graphic file (type png)
 <use asset/post-pruning.png>
 Package pdftex.def Info: asset/post-pruning.png  used on input line 251.
 (pdftex.def)             Requested size: 343.94757pt x 181.76578pt.
 
 
-[12 <./asset/ig2-1.png> <./asset/igr-2.png>]
+[14 <./asset/post-pruning.png>]
+<asset/continuous-decision1.png, id=333, 818.05624pt x 448.67625pt>
+File: asset/continuous-decision1.png Graphic file (type png)
+<use asset/continuous-decision1.png>
+Package pdftex.def Info: asset/continuous-decision1.png  used on input line 252.
+(pdftex.def)             Requested size: 357.70491pt x 196.19267pt.
+<asset/continuous-decision2.png, id=334, 862.22125pt x 475.7775pt>
+File: asset/continuous-decision2.png Graphic file (type png)
+<use asset/continuous-decision2.png>
+Package pdftex.def Info: asset/continuous-decision2.png  used on input line 252.
+(pdftex.def)             Requested size: 357.70491pt x 197.37863pt.
+<asset/continuous-decision3.png, id=335, 800.9925pt x 466.74374pt>
+File: asset/continuous-decision3.png Graphic file (type png)
+<use asset/continuous-decision3.png>
+Package pdftex.def Info: asset/continuous-decision3.png  used on input line 252.
+(pdftex.def)             Requested size: 357.70491pt x 208.43742pt.
 
-[13 <./asset/post-pruning.png>]
-
-[14]
 
 [15]
 
-[16]
+[16 <./asset/continuous-decision1.png> <./asset/continuous-decision2.png> <./asset/continuous-decision3.png>]
 
-[17] (./ds-main.aux)
+[17]
+
+[18]
+
+[19]
+<asset/similarity.png, id=360, 376.40625pt x 233.87375pt>
+File: asset/similarity.png Graphic file (type png)
+<use asset/similarity.png>
+Package pdftex.def Info: asset/similarity.png  used on input line 263.
+(pdftex.def)             Requested size: 366.87881pt x 227.97064pt.
+<asset/similarity2.png, id=361, 477.785pt x 223.83624pt>
+File: asset/similarity2.png Graphic file (type png)
+<use asset/similarity2.png>
+Package pdftex.def Info: asset/similarity2.png  used on input line 263.
+(pdftex.def)             Requested size: 366.87881pt x 171.87627pt.
+
+
+[20 <./asset/similarity.png> <./asset/similarity2.png>]
+
+[21]
+<asset/dendogram1.png, id=372, 458.71375pt x 263.98625pt>
+File: asset/dendogram1.png Graphic file (type png)
+<use asset/dendogram1.png>
+Package pdftex.def Info: asset/dendogram1.png  used on input line 265.
+(pdftex.def)             Requested size: 225.14267pt x 129.5686pt.
+<asset/dendogram2.png, id=373, 462.72874pt x 258.9675pt>
+File: asset/dendogram2.png Graphic file (type png)
+<use asset/dendogram2.png>
+Package pdftex.def Info: asset/dendogram2.png  used on input line 265.
+(pdftex.def)             Requested size: 231.5262pt x 129.5686pt.
+<asset/dendogram3.png, id=374, 467.7475pt x 244.915pt>
+File: asset/dendogram3.png Graphic file (type png)
+<use asset/dendogram3.png>
+Package pdftex.def Info: asset/dendogram3.png  used on input line 265.
+(pdftex.def)             Requested size: 247.46248pt x 129.5686pt.
+<asset/dendogram4.png, id=375, 457.71pt x 254.9525pt>
+File: asset/dendogram4.png Graphic file (type png)
+<use asset/dendogram4.png>
+Package pdftex.def Info: asset/dendogram4.png  used on input line 265.
+(pdftex.def)             Requested size: 232.61887pt x 129.5686pt.
+
+
+[22]
+
+[23 <./asset/dendogram1.png> <./asset/dendogram2.png> <./asset/dendogram3.png> <./asset/dendogram4.png>]
+<asset/DBSCAN.png, id=388, 492.84125pt x 257.96375pt>
+File: asset/DBSCAN.png Graphic file (type png)
+<use asset/DBSCAN.png>
+Package pdftex.def Info: asset/DBSCAN.png  used on input line 266.
+(pdftex.def)             Requested size: 366.87881pt x 192.03954pt.
+<asset/DBSCAN2.png, id=389, 464.73625pt x 244.915pt>
+File: asset/DBSCAN2.png Graphic file (type png)
+<use asset/DBSCAN2.png>
+Package pdftex.def Info: asset/DBSCAN2.png  used on input line 266.
+(pdftex.def)             Requested size: 366.87881pt x 193.34991pt.
+
+
+[24]
+
+[25 <./asset/DBSCAN.png> <./asset/DBSCAN2.png>]
+<asset/frequent-itemset.png, id=401, 284.06125pt x 176.66pt>
+File: asset/frequent-itemset.png Graphic file (type png)
+<use asset/frequent-itemset.png>
+Package pdftex.def Info: asset/frequent-itemset.png  used on input line 275.
+(pdftex.def)             Requested size: 208.34254pt x 129.5686pt.
+<asset/frequent-itemset2.png, id=402, 455.7025pt x 246.9225pt>
+File: asset/frequent-itemset2.png Graphic file (type png)
+<use asset/frequent-itemset2.png>
+Package pdftex.def Info: asset/frequent-itemset2.png  used on input line 275.
+(pdftex.def)             Requested size: 239.12222pt x 129.5686pt.
+<asset/frequent-itemset3.png, id=403, 463.7325pt x 235.88126pt>
+File: asset/frequent-itemset3.png Graphic file (type png)
+<use asset/frequent-itemset3.png>
+Package pdftex.def Info: asset/frequent-itemset3.png  used on input line 275.
+(pdftex.def)             Requested size: 254.72816pt x 129.5686pt.
+<asset/frequent-itemset4.png, id=404, 461.725pt x 233.87375pt>
+File: asset/frequent-itemset4.png Graphic file (type png)
+<use asset/frequent-itemset4.png>
+Package pdftex.def Info: asset/frequent-itemset4.png  used on input line 275.
+(pdftex.def)             Requested size: 255.80951pt x 129.5686pt.
+
+
+[26]
+
+[27 <./asset/frequent-itemset.png> <./asset/frequent-itemset2.png> <./asset/frequent-itemset3.png> <./asset/frequent-itemset4.png>]
+
+[28]
+<asset/apriori.png, id=421, 966.61125pt x 504.88625pt>
+File: asset/apriori.png Graphic file (type png)
+<use asset/apriori.png>
+Package pdftex.def Info: asset/apriori.png  used on input line 277.
+(pdftex.def)             Requested size: 357.70491pt x 186.83578pt.
+<asset/apriori2.png, id=422, 938.50626pt x 500.87125pt>
+File: asset/apriori2.png Graphic file (type png)
+<use asset/apriori2.png>
+Package pdftex.def Info: asset/apriori2.png  used on input line 277.
+(pdftex.def)             Requested size: 357.70491pt x 190.8986pt.
+<asset/apriori3.png, id=423, 946.53625pt x 489.83pt>
+File: asset/apriori3.png Graphic file (type png)
+<use asset/apriori3.png>
+Package pdftex.def Info: asset/apriori3.png  used on input line 277.
+(pdftex.def)             Requested size: 357.70491pt x 185.10588pt.
+
+
+[29 <./asset/apriori.png> <./asset/apriori2.png> <./asset/apriori3.png>]
+<asset/fp-tree0.png, id=431, 900.36375pt x 389.455pt>
+File: asset/fp-tree0.png Graphic file (type png)
+<use asset/fp-tree0.png>
+Package pdftex.def Info: asset/fp-tree0.png  used on input line 278.
+(pdftex.def)             Requested size: 299.53893pt x 129.5686pt.
+<asset/fp-tree1.png, id=432, 918.43124pt x 438.63875pt>
+File: asset/fp-tree1.png Graphic file (type png)
+<use asset/fp-tree1.png>
+Package pdftex.def Info: asset/fp-tree1.png  used on input line 278.
+(pdftex.def)             Requested size: 271.29924pt x 129.5686pt.
+<asset/fp-tree2.png, id=433, 937.5025pt x 450.68375pt>
+File: asset/fp-tree2.png Graphic file (type png)
+<use asset/fp-tree2.png>
+Package pdftex.def Info: asset/fp-tree2.png  used on input line 278.
+(pdftex.def)             Requested size: 269.52272pt x 129.5686pt.
+<asset/fp-tree3.png, id=434, 873.2625pt x 468.75125pt>
+File: asset/fp-tree3.png Graphic file (type png)
+<use asset/fp-tree3.png>
+Package pdftex.def Info: asset/fp-tree3.png  used on input line 278.
+(pdftex.def)             Requested size: 241.38048pt x 129.5686pt.
+<asset/fp-tree4.png, id=435, 894.34125pt x 422.57875pt>
+File: asset/fp-tree4.png Graphic file (type png)
+<use asset/fp-tree4.png>
+Package pdftex.def Info: asset/fp-tree4.png  used on input line 278.
+(pdftex.def)             Requested size: 274.22704pt x 129.5686pt.
+
+
+[30]
+
+[31 <./asset/fp-tree0.png> <./asset/fp-tree1.png> <./asset/fp-tree2.png> <./asset/fp-tree3.png> <./asset/fp-tree4.png>]
+
+[32]
+
+[33] (./ds-main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -823,18 +978,18 @@ Package rerunfilecheck Info: File `ds-main.out' has not changed.
 (rerunfilecheck)             Checksum: A060B45837A1250E920E3DBB0C82984C;7215.
  ) 
 Here is how much of TeX's memory you used:
- 26819 strings out of 473190
- 521954 string characters out of 5704335
- 942602 words of memory out of 5000000
- 49490 multiletter control sequences out of 15000+600000
- 618692 words of font info for 120 fonts, out of 8000000 for 9000
+ 27172 strings out of 473190
+ 529000 string characters out of 5704335
+ 966817 words of memory out of 5000000
+ 49767 multiletter control sequences out of 15000+600000
+ 621281 words of font info for 150 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,8n,101p,1048b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ds-main.pdf (17 pages, 1179123 bytes).
+Output written on ds-main.pdf (33 pages, 2474630 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
- 64 named destinations out of 1000 (max. 500000)
- 35244 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 410 compressed objects within 5 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 35359 words of extra memory for PDF output out of 35830 (max. 10000000)
 
