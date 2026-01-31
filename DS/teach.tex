@@ -960,3 +960,401 @@ Not ordering items by global frequency before building the FP‑tree (tree becom
 
 \textbf{Key takeaways:} FP‑Growth uses an FP‑tree and DFS to mine patterns with only two passes.
 }
+
+% 5.1 Introduction (Association Rules)
+\DefineTeach{5.1}{%
+\begin{examlikelihood}{High}
+Often: define an association rule and its parts (antecedent/consequent) and relate rules to frequent itemsets.
+Answer: rule $X \rightarrow Y$ with $X \cap Y = \emptyset$; rules are generated from frequent itemsets.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a tiny basket dataset, propose a reasonable rule and interpret it in words.
+Answer: e.g., $\{\text{bread}\} \rightarrow \{\text{butter}\}$ means baskets with bread often also contain butter.
+\end{examfavorite}
+
+Why (motivation): We want simple, actionable “if‑then” patterns that summarize co‑purchase behavior.\\
+What (definition): An association rule is an implication $X \rightarrow Y$ between disjoint itemsets; $X$ is the antecedent, $Y$ the consequent.\\
+How (procedure/usage): Mine frequent itemsets first, then generate candidate rules and keep those that pass quality thresholds.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Rule form:} $X \rightarrow Y$, with $X \cap Y = \emptyset$.
+  \item \textbf{Antecedent:} left side (condition); \textbf{Consequent:} right side (outcome).
+  \item \textbf{From itemsets:} rules are derived from frequent itemsets of size $\ge 2$.
+  \item \textbf{Interpretation:} “If $X$ occurs in a transaction, $Y$ tends to occur too.”
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Treating rules as causal (“$X$ causes $Y$”). Association rules are correlational and can be misleading without lift/base‑rate checks.
+\end{pitfall}
+
+\textbf{Advantages:} highly interpretable patterns; useful for merchandising, cross‑sell, and recommendation hints.\\
+\textbf{Limitations:} many trivial/spurious rules; sensitive to thresholds; does not imply causation.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.18\textheight]{asset/assoc-rules.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/assoc-rules2.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/assoc-rules3.png}
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item Association rules express “if‑then” co‑occurrence patterns.
+  \item Rules come from frequent itemsets and need quality thresholds to be useful.
+\end{itemize}
+}
+
+% 5.2 Generating Association Rules
+\DefineTeach{5.2}{%
+\begin{examlikelihood}{High}
+Often: describe how to generate rules from a frequent itemset and how to prune them.
+Answer: split a frequent itemset $I$ into $X$ and $Y=I\setminus X$; keep rules with confidence above min\_conf (and usually lift).
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a frequent itemset $I=\{A,B,C\}$, list candidate rules and compute confidence for one.
+Answer: all non‑empty proper splits, e.g., $AB\rightarrow C$, $A\rightarrow BC$, etc.
+\end{examfavorite}
+
+Why (motivation): Mining frequent itemsets is not enough; we need directional rules that are strong and useful.\\
+What (definition): A rule $X \rightarrow Y$ is generated from a frequent itemset $I$ by choosing $X \subset I$ and $Y=I\setminus X$.\\
+How (procedure/usage): For each frequent itemset, enumerate non‑empty splits, compute confidence (and lift), and prune by thresholds.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Candidates:} for itemset $I$, all rules $X \rightarrow I\setminus X$ with $\emptyset \subset X \subset I$.
+  \item \textbf{Confidence:} $\mathrm{conf}(X\rightarrow Y)=\frac{\mathrm{supp}(X\cup Y)}{\mathrm{supp}(X)}$.
+  \item \textbf{Pruning:} if a rule fails min\_conf, any rule with smaller antecedent may still pass (use careful pruning).
+  \item \textbf{Typical flow:} mine frequent itemsets $\rightarrow$ generate rules $\rightarrow$ filter by min\_conf (and lift).
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Generating rules from infrequent itemsets or forgetting to enforce $X \cap Y = \emptyset$.
+\end{pitfall}
+
+\textbf{Advantages:} systematic generation from frequent itemsets; simple to explain and compute.\\
+\textbf{Limitations:} rule count can explode; high confidence can be misleading without lift.
+
+\begin{visualbox}
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners, minimum height=7mm, minimum width=24mm, align=center},
+  arrow/.style={-Latex, thick},
+  node distance=10mm and 14mm
+]
+\node[box] (fi) {Frequent\\itemset $I$};
+\node[box, right=of fi] (split) {Split $I$\\into $X,Y$};
+\node[box, right=of split] (rule) {Rules\\$X\rightarrow Y$};
+\draw[arrow] (fi) -- (split);
+\draw[arrow] (split) -- (rule);
+\end{tikzpicture}
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item Rules come from splitting frequent itemsets into antecedent and consequent.
+  \item Use confidence (and lift) thresholds to prune weak or misleading rules.
+\end{itemize}
+}
+
+% 5.3 Evaluation (support, confidence, lift, conviction)
+\DefineTeach{5.3}{%
+\begin{examlikelihood}{High}
+Often: compute support, confidence, and lift for a rule and interpret the result.
+Answer: use counts (or a confusion matrix) to compute $P(X \cap Y)$, $P(Y|X)$, and $P(Y|X)/P(Y)$.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Interpret lift values: 1, much greater than 1, and much less than 1.
+Answer: 1 means independence; $\gg 1$ strong positive association; $\ll 1$ negative association.
+\end{examfavorite}
+
+Why (motivation): There are many rules; we need measures that balance coverage, reliability, and base rates.\\
+What (definition): Support measures how often the rule occurs, confidence measures how often it is correct when it fires, and lift adjusts confidence by the base rate of $Y$ (independence check).\\
+How (procedure/usage): Compute metrics from counts (or confusion matrix), then filter by minsup/minconf and prefer high lift (and reasonable support).
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Support:} $\mathrm{supp}(X\rightarrow Y)=\mathrm{supp}(X\cup Y)=P(X \cap Y)$.
+  \item \textbf{Confidence:} $\mathrm{conf}(X\rightarrow Y)=\frac{P(X \cap Y)}{P(X)}=P(Y|X)$.
+  \item \textbf{Lift:} $\mathrm{lift}(X\rightarrow Y)=\frac{P(Y|X)}{P(Y)}=\frac{P(X \cap Y)}{P(X)P(Y)}$.
+  \item \textbf{Conviction:} $\mathrm{conv}(X\rightarrow Y)=\frac{1-P(Y)}{1-\mathrm{conf}}$ (directional strength).
+  \item \textbf{Confusion matrix view:} predict $Y$ when $X$ occurs.
+  \item \textbf{TP:} $X$ and $Y$; \textbf{FP:} $X$ and not $Y$; \textbf{FN:} $Y$ and not $X$; \textbf{TN:} neither.
+  \item \textbf{Mapping:} confidence = precision = $\frac{TP}{TP+FP}$; support = $\frac{TP}{N}$.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+High confidence can be trivial if $Y$ is very common; always check lift (and support).
+\end{pitfall}
+
+\textbf{Advantages:} simple, interpretable rule quality metrics; lift corrects for base rates.\\
+\textbf{Limitations:} can favor rare items or tiny supports; does not imply causation.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.18\textheight]{asset/conf-matrix1.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/conf-matrix2.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/conf-matrix3.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/conf-matrix4.png}
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item Lift = 1 means independence; $\gg 1$ strong positive association; $\ll 1$ negative association.
+  \item Use support + confidence + lift together to judge rule quality.
+\end{itemize}
+}
+
+% 5.5 Simpson's Paradox
+\DefineTeach{5.5}{%
+\begin{examlikelihood}{High}
+Often: define Simpson's paradox and explain how it can affect association rules or metrics.
+Answer: a trend in aggregated data reverses after stratifying by a confounder; subgroup analysis is required.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a table with two subgroups, identify the paradox and name the confounder.
+Answer: the confounder changes the base rates; the combined trend is misleading.
+\end{examfavorite}
+
+Why (motivation): Aggregated metrics can hide or reverse real relationships, leading to bad rules or decisions.\\
+What (definition): Simpson's paradox occurs when an association in pooled data reverses after conditioning on a confounding variable (a third variable).\\
+How (procedure/usage): Always check key subgroups (stratify), compare within‑group metrics, and look for confounders.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Paradox signal:} pooled trend $\ne$ subgroup trends (often reversed).
+  \item \textbf{Cause:} confounding variable with different base rates across groups.
+  \item \textbf{Fix:} stratify by the confounder; compare like with like.
+  \item \textbf{Rule mining:} a high‑lift rule may disappear or flip after stratification.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Reporting only aggregated confidence/lift and ignoring confounding variables that drive subgroup differences.
+\end{pitfall}
+
+\textbf{Advantages:} forces careful interpretation; highlights need for subgroup analysis.\\
+\textbf{Limitations:} requires enough data per subgroup; choosing stratification variables can be non‑obvious.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.2\textheight]{asset/simpson.png}
+\vspace{1mm}
+\includegraphics[height=0.2\textheight]{asset/simpson2.png}
+\vspace{1mm}
+\includegraphics[height=0.2\textheight]{asset/confounding.png}
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item Aggregation can reverse associations; always check subgroups.
+  \item Confounders drive the paradox; stratify before trusting a rule.
+\end{itemize}
+}
+
+% 6.1 Temporal Data
+\DefineTeach{6.1}{%
+\begin{examlikelihood}{High}
+Often: define temporal data and list its key characteristics (order, granularity, seasonality).
+Answer: temporal data is indexed by time; ordering matters; it may show trend/seasonality and irregular sampling.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Explain why random train/test splits are wrong for time series.
+Answer: time order must be preserved to avoid leakage; use forward‑chaining or hold‑out of later periods.
+\end{examfavorite}
+
+Why (motivation): Time‑indexed data appears in finance, sensors, logs, and business KPIs; ignoring time breaks analysis.\\
+What (definition): Temporal data is a sequence of observations indexed by time; the order and spacing carry meaning.\\
+How (procedure/usage): Inspect timestamps, granularity, missing/irregular intervals, and basic patterns (trend/seasonality) before modeling.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Time index:} timestamp or ordered time steps.
+  \item \textbf{Granularity:} sampling rate (hourly/daily/etc.).
+  \item \textbf{Patterns:} trend, seasonality, cycles, noise.
+  \item \textbf{Irregularity:} gaps, unequal spacing, missing data.
+  \item \textbf{Leakage risk:} never use future data to predict the past.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Treating temporal data as i.i.d. and shuffling it; this destroys order and causes leakage.
+\end{pitfall}
+
+\textbf{Advantages:} captures dynamics and change over time; supports forecasting and anomaly detection.\\
+\textbf{Limitations:} non‑stationarity and irregular sampling complicate modeling; needs careful preprocessing.
+
+\begin{visualbox}
+\centering
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item Temporal data has ordered observations; order is part of the signal.
+  \item Always respect time when splitting data and interpreting patterns.
+\end{itemize}
+}
+
+% 6.2 Introduction to Time Series
+\DefineTeach{6.2}{%
+\begin{examlikelihood}{High}
+Often: define a time series and its components (trend, seasonality, noise).
+Answer: a time series is an ordered sequence of observations; components include trend/seasonal/cycle/noise.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Identify components from a small plot and state if the series is stationary.
+Answer: describe trend/seasonality; stationary means constant mean/variance over time.
+\end{examfavorite}
+
+Why (motivation): Time series models use structure in time to forecast and detect anomalies.\\
+What (definition): A time series is a sequence $\{x_t\}$ indexed by time; it can be decomposed into components.\\
+How (procedure/usage): Visualize, decompose, and check stationarity before choosing models.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{Components:} trend, seasonality, cycle, noise.
+  \item \textbf{Stationarity:} mean/variance (and autocovariance) stable over time.
+  \item \textbf{Decomposition:} additive $x_t=T_t+S_t+C_t+e_t$ or multiplicative $x_t=T_t\cdot S_t\cdot C_t\cdot e_t$.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Ignoring seasonality or trend and fitting a stationary model to a non‑stationary series.
+\end{pitfall}
+
+\textbf{Advantages:} explicit modeling of temporal structure; enables forecasting.\\
+\textbf{Limitations:} non‑stationarity and seasonality can break simple models.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.2\textheight]{asset/time-series1.png}
+\vspace{1mm}
+\includegraphics[height=0.2\textheight]{asset/time-series2.png}
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item Time series have components; visualize and decompose first.
+  \item Stationarity matters for many models.
+\end{itemize}
+}
+
+% 6.3 Analysis
+\DefineTeach{6.3}{%
+\begin{examlikelihood}{High}
+Often: explain ACF/PACF or identify lags and autocorrelation from a plot.
+Answer: ACF shows correlation with past lags; PACF shows direct lag effects.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given ACF/PACF plots, suggest a simple AR or MA order.
+Answer: cut‑off in ACF suggests MA(q); cut‑off in PACF suggests AR(p).
+\end{examfavorite}
+
+Why (motivation): We need to understand temporal dependence before choosing a forecasting model.\\
+What (definition): Time‑series analysis studies autocorrelation and lag structure; \textbf{ACF} (Autocorrelation Function) measures correlation of a series with its past lags. \textbf{White noise} is a series with zero mean, constant variance, and no autocorrelation at non‑zero lags.\\
+How (procedure/usage): Plot the series, check ACF, and inspect residuals for remaining structure.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{ACF:} correlation of $x_t$ with $x_{t-k}$ across lags.
+  \item \textbf{Autocorrelation formula:} $\rho_k=\frac{\sum_{t=k+1}^{n}(x_t-\bar{x})(x_{t-k}-\bar{x})}{\sum_{t=1}^{n}(x_t-\bar{x})^2}$.
+  \item \textbf{White noise:} $\rho_k \approx 0$ for all $k>0$.
+  \item \textbf{Rule of thumb:} ACF cut‑off suggests MA order.
+  \item \textbf{Diagnostics:} residuals should look like white noise.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Choosing model orders from a single noisy plot; verify with diagnostics and hold‑out tests.
+\end{pitfall}
+
+\textbf{Advantages:} reveals dependence structure; guides model selection.\\
+\textbf{Limitations:} plots can be noisy; patterns can be ambiguous.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.18\textheight]{asset/time-analysis.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/time-analysis2.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/time-analysis3.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/moving-average.png}
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item Use ACF/PACF to understand lag structure and pick model orders.
+  \item Always validate with residual checks and time‑based splits.
+\end{itemize}
+}
+
+% 6.4 Forecasting
+\DefineTeach{6.4}{%
+\begin{examlikelihood}{High}
+Often: distinguish AR, MA, ARMA, and ARIMA; explain when differencing is needed.
+Answer: AR uses past values, MA uses past errors, ARMA combines both, ARIMA adds differencing for non‑stationary series.
+\end{examlikelihood}
+
+\begin{examfavorite}
+Given a short series, explain how to split data and evaluate forecasts.
+Answer: keep chronological order; train on earlier data and test on later data; report MAE/MSE/RMSE or MAPE.
+\end{examfavorite}
+
+Why (motivation): We want models that capture temporal dependence and produce reliable forecasts.\\
+What (definition): \textbf{AR} (Autoregressive) models regress on past values, \textbf{MA} (Moving Average) models regress on past errors, \textbf{ARMA} (Autoregressive Moving Average) combines AR+MA, and \textbf{ARIMA} (Autoregressive Integrated Moving Average) adds differencing to handle non‑stationarity.\\
+How (procedure/usage): Check stationarity, difference if needed, choose AR/MA orders, fit, and evaluate on a time‑ordered test set.
+
+\begin{cheatsheet}
+\begin{itemize}
+  \item \textbf{AR($p$):} $x_t=c+\sum_{i=1}^{p}\phi_i x_{t-i}+\varepsilon_t$.
+  \item \textbf{MA($q$):} $x_t=c+\sum_{i=1}^{q}\theta_i \varepsilon_{t-i}+\varepsilon_t$.
+  \item \textbf{ARMA($p,q$):} combine AR and MA terms.
+  \item \textbf{ARIMA($p,d,q$):} difference $d$ times to make series stationary, then ARMA.
+  \item \textbf{Stationarity:} constant mean/variance; use differencing to remove trend.
+  \item \textbf{Evaluation:} MAE, MSE/RMSE, MAPE; time‑ordered train/test split.
+  \item \textbf{Granger causality:} $X$ helps predict $Y$ if past $X$ improves forecast of $Y$ beyond past $Y$ alone.
+\end{itemize}
+\end{cheatsheet}
+
+\begin{pitfall}
+Randomly shuffling time series for train/test or claiming “causality” from Granger tests; it is predictive, not causal in a real‑world sense.
+\end{pitfall}
+
+\textbf{Advantages:} interpretable baselines; fast to fit; good for short‑term forecasting.\\
+\textbf{Limitations:} assumes linear structure; sensitive to non‑stationarity and outliers; limited for complex patterns.
+
+\begin{visualbox}
+\centering
+\includegraphics[height=0.18\textheight]{asset/6.4.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/6.4-2.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/6.4-3.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/6.4-4.png}
+\vspace{1mm}
+\includegraphics[height=0.18\textheight]{asset/6.4-5.png}
+\end{visualbox}
+
+\textbf{Key takeaways:}
+\begin{itemize}
+  \item AR/MA/ARMA model dependence; ARIMA handles non‑stationary series via differencing.
+  \item Always evaluate with time‑ordered splits and forecast error metrics.
+\end{itemize}
+}

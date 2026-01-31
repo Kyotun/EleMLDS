@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  30 JAN 2026 23:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  31 JAN 2026 20:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -966,10 +966,143 @@ Package pdftex.def Info: asset/fp-tree4.png  used on input line 278.
 [30]
 
 [31 <./asset/fp-tree0.png> <./asset/fp-tree1.png> <./asset/fp-tree2.png> <./asset/fp-tree3.png> <./asset/fp-tree4.png>]
+<asset/assoc-rules.png, id=450, 474.77374pt x 203.76125pt>
+File: asset/assoc-rules.png Graphic file (type png)
+<use asset/assoc-rules.png>
+Package pdftex.def Info: asset/assoc-rules.png  used on input line 286.
+(pdftex.def)             Requested size: 301.91264pt x 129.5686pt.
+<asset/assoc-rules2.png, id=451, 476.78125pt x 260.975pt>
+File: asset/assoc-rules2.png Graphic file (type png)
+<use asset/assoc-rules2.png>
+Package pdftex.def Info: asset/assoc-rules2.png  used on input line 286.
+(pdftex.def)             Requested size: 236.71677pt x 129.5686pt.
+<asset/assoc-rules3.png, id=452, 475.7775pt x 261.97874pt>
+File: asset/assoc-rules3.png Graphic file (type png)
+<use asset/assoc-rules3.png>
+Package pdftex.def Info: asset/assoc-rules3.png  used on input line 286.
+(pdftex.def)             Requested size: 235.31093pt x 129.5686pt.
+
 
 [32]
 
-[33] (./ds-main.aux)
+[33 <./asset/assoc-rules.png> <./asset/assoc-rules2.png> <./asset/assoc-rules3.png>]
+
+[34]
+<asset/conf-matrix1.png, id=468, 475.7775pt x 243.91125pt>
+File: asset/conf-matrix1.png Graphic file (type png)
+<use asset/conf-matrix1.png>
+Package pdftex.def Info: asset/conf-matrix1.png  used on input line 288.
+(pdftex.def)             Requested size: 252.74164pt x 129.5686pt.
+<asset/conf-matrix2.png, id=469, 473.77pt x 241.90375pt>
+File: asset/conf-matrix2.png Graphic file (type png)
+<use asset/conf-matrix2.png>
+Package pdftex.def Info: asset/conf-matrix2.png  used on input line 288.
+(pdftex.def)             Requested size: 253.77168pt x 129.5686pt.
+<asset/conf-matrix3.png, id=470, 479.7925pt x 258.9675pt>
+File: asset/conf-matrix3.png Graphic file (type png)
+<use asset/conf-matrix3.png>
+Package pdftex.def Info: asset/conf-matrix3.png  used on input line 288.
+(pdftex.def)             Requested size: 240.06403pt x 129.5686pt.
+<asset/conf-matrix4.png, id=471, 470.75874pt x 249.93375pt>
+File: asset/conf-matrix4.png Graphic file (type png)
+<use asset/conf-matrix4.png>
+Package pdftex.def Info: asset/conf-matrix4.png  used on input line 288.
+(pdftex.def)             Requested size: 244.05609pt x 129.5686pt.
+
+
+[35]
+
+[36 <./asset/conf-matrix1.png> <./asset/conf-matrix2.png> <./asset/conf-matrix3.png> <./asset/conf-matrix4.png>]
+<asset/simpson.png, id=484, 476.78125pt x 254.9525pt>
+File: asset/simpson.png Graphic file (type png)
+<use asset/simpson.png>
+Package pdftex.def Info: asset/simpson.png  used on input line 290.
+(pdftex.def)             Requested size: 269.24367pt x 143.96878pt.
+<asset/simpson2.png, id=485, 466.74374pt x 248.93pt>
+File: asset/simpson2.png Graphic file (type png)
+<use asset/simpson2.png>
+Package pdftex.def Info: asset/simpson2.png  used on input line 290.
+(pdftex.def)             Requested size: 269.94951pt x 143.96878pt.
+<asset/confounding.png, id=486, 452.69125pt x 217.81375pt>
+File: asset/confounding.png Graphic file (type png)
+<use asset/confounding.png>
+Package pdftex.def Info: asset/confounding.png  used on input line 290.
+(pdftex.def)             Requested size: 299.21231pt x 143.96878pt.
+
+
+[37]
+
+[38 <./asset/simpson.png> <./asset/simpson2.png> <./asset/confounding.png>]
+
+[39]
+<asset/time-series1.png, id=503, 463.7325pt x 236.885pt>
+File: asset/time-series1.png Graphic file (type png)
+<use asset/time-series1.png>
+Package pdftex.def Info: asset/time-series1.png  used on input line 299.
+(pdftex.def)             Requested size: 281.8433pt x 143.96878pt.
+<asset/time-series2.png, id=504, 466.74374pt x 242.9075pt>
+File: asset/time-series2.png Graphic file (type png)
+<use asset/time-series2.png>
+Package pdftex.def Info: asset/time-series2.png  used on input line 299.
+(pdftex.def)             Requested size: 276.62988pt x 143.96878pt.
+
+
+[40 <./asset/time-series1.png> <./asset/time-series2.png>]
+<asset/time-analysis.png, id=512, 318.18875pt x 229.85875pt>
+File: asset/time-analysis.png Graphic file (type png)
+<use asset/time-analysis.png>
+Package pdftex.def Info: asset/time-analysis.png  used on input line 300.
+(pdftex.def)             Requested size: 179.36913pt x 129.5686pt.
+<asset/time-analysis2.png, id=513, 431.6125pt x 234.8775pt>
+File: asset/time-analysis2.png Graphic file (type png)
+<use asset/time-analysis2.png>
+Package pdftex.def Info: asset/time-analysis2.png  used on input line 300.
+(pdftex.def)             Requested size: 238.09229pt x 129.5686pt.
+<asset/time-analysis3.png, id=514, 296.10625pt x 216.81pt>
+File: asset/time-analysis3.png Graphic file (type png)
+<use asset/time-analysis3.png>
+Package pdftex.def Info: asset/time-analysis3.png  used on input line 300.
+(pdftex.def)             Requested size: 176.96478pt x 129.5686pt.
+<asset/moving-average.png, id=515, 459.7175pt x 247.92625pt>
+File: asset/moving-average.png Graphic file (type png)
+<use asset/moving-average.png>
+Package pdftex.def Info: asset/moving-average.png  used on input line 300.
+(pdftex.def)             Requested size: 240.25398pt x 129.5686pt.
+
+
+[41]
+
+[42 <./asset/time-analysis.png> <./asset/time-analysis2.png> <./asset/time-analysis3.png> <./asset/moving-average.png>]
+<asset/6.4.png, id=529, 485.815pt x 264.99pt>
+File: asset/6.4.png Graphic file (type png)
+<use asset/6.4.png>
+Package pdftex.def Info: asset/6.4.png  used on input line 301.
+(pdftex.def)             Requested size: 237.53993pt x 129.5686pt.
+<asset/6.4-2.png, id=530, 483.8075pt x 255.95625pt>
+File: asset/6.4-2.png Graphic file (type png)
+<use asset/6.4-2.png>
+Package pdftex.def Info: asset/6.4-2.png  used on input line 301.
+(pdftex.def)             Requested size: 244.90775pt x 129.5686pt.
+<asset/6.4-3.png, id=531, 481.8pt x 259.97125pt>
+File: asset/6.4-3.png Graphic file (type png)
+<use asset/6.4-3.png>
+Package pdftex.def Info: asset/6.4-3.png  used on input line 301.
+(pdftex.def)             Requested size: 240.12747pt x 129.5686pt.
+<asset/6.4-4.png, id=532, 489.83pt x 260.975pt>
+File: asset/6.4-4.png Graphic file (type png)
+<use asset/6.4-4.png>
+Package pdftex.def Info: asset/6.4-4.png  used on input line 301.
+(pdftex.def)             Requested size: 243.19533pt x 129.5686pt.
+<asset/6.4-5.png, id=533, 378.41376pt x 248.93pt>
+File: asset/6.4-5.png Graphic file (type png)
+<use asset/6.4-5.png>
+Package pdftex.def Info: asset/6.4-5.png  used on input line 301.
+(pdftex.def)             Requested size: 196.96683pt x 129.5686pt.
+
+
+[43]
+
+[44 <./asset/6.4.png> <./asset/6.4-2.png> <./asset/6.4-3.png> <./asset/6.4-4.png> <./asset/6.4-5.png>] (./ds-main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -978,18 +1111,18 @@ Package rerunfilecheck Info: File `ds-main.out' has not changed.
 (rerunfilecheck)             Checksum: A060B45837A1250E920E3DBB0C82984C;7215.
  ) 
 Here is how much of TeX's memory you used:
- 27172 strings out of 473190
- 529000 string characters out of 5704335
- 966817 words of memory out of 5000000
- 49767 multiletter control sequences out of 15000+600000
- 621281 words of font info for 150 fonts, out of 8000000 for 9000
+ 27412 strings out of 473190
+ 534233 string characters out of 5704335
+ 981945 words of memory out of 5000000
+ 49984 multiletter control sequences out of 15000+600000
+ 621801 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,8n,101p,1048b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on ds-main.pdf (33 pages, 2474630 bytes).
+</opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on ds-main.pdf (44 pages, 3630799 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
- 80 named destinations out of 1000 (max. 500000)
- 35359 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 644 PDF objects out of 1000 (max. 8388607)
+ 452 compressed objects within 5 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 35464 words of extra memory for PDF output out of 35830 (max. 10000000)
 
